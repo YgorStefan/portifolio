@@ -7,10 +7,10 @@
 
 ### Infraestrutura
 
-- [ ] **INFRA-01**: Projeto Laravel 12 criado com PHP 8.2, Vite e Tailwind CSS v4
-- [ ] **INFRA-02**: Pipeline Vite compilando corretamente (`npm run build`) com output em `public/build/`
+- [x] **INFRA-01**: Projeto Laravel 12 criado com PHP 8.2, Vite e Tailwind CSS v4
+- [x] **INFRA-02**: Pipeline Vite compilando corretamente (`npm run build`) com output em `public/build/`
 - [ ] **INFRA-03**: Configuração de deploy documentada para Hostinger (document root → `public/`)
-- [ ] **INFRA-04**: `.env.example` com todas as variáveis necessárias documentadas
+- [x] **INFRA-04**: `.env.example` com todas as variáveis necessárias documentadas
 
 ### Layout e Navegação
 
@@ -63,7 +63,7 @@
 - [ ] **VIS-01**: Dark theme com acento azul elétrico consistente em todos os elementos interativos
 - [ ] **VIS-02**: Animações de entrada ao scroll com AOS em todas as seções
 - [ ] **VIS-03**: Transições hover suaves em botões, links e cards de projeto
-- [ ] **VIS-04**: Google Fonts carregando corretamente em produção
+- [x] **VIS-04**: Google Fonts carregando corretamente em produção
 
 ### SEO e Compartilhamento
 
@@ -102,10 +102,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-01 | Phase 1 | Complete |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Complete |
 | LAYOUT-01 | Phase 1 | Pending |
 | LAYOUT-02 | Phase 1 | Pending |
 | LAYOUT-03 | Phase 1 | Pending |
@@ -137,7 +137,7 @@
 | VIS-01 | Phase 2 | Pending |
 | VIS-02 | Phase 2 | Pending |
 | VIS-03 | Phase 2 | Pending |
-| VIS-04 | Phase 1 | Pending |
+| VIS-04 | Phase 1 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
 | ASSET-01 | Phase 2 | Pending |
