@@ -12,7 +12,8 @@ Causar uma primeira impressão profissional e memorável a recrutadores e client
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Navegação suave (smooth scroll) entre seções — Validated in Phase 1: Foundation
+- [x] Botão "voltar ao topo" — Validated in Phase 1: Foundation
 
 ### Active
 
@@ -78,4 +79,4 @@ Este documento evolui a cada transição de fase e milestone.
 4. Atualizar Context com estado atual
 
 ---
-*Last updated: 2026-03-24 after initialization*
+*Last updated: 2026-03-24 after Phase 1: Foundation complete*
