@@ -114,8 +114,40 @@
         </div>
     </section>
 
-    <section id="skills" class="min-h-screen flex items-center justify-center">
-        <p class="text-gray-400 text-sm">Skills — Phase 2</p>
+    <section id="skills" class="py-24 bg-bg-card">
+        <div class="container mx-auto px-6">
+
+            {{-- Section heading --}}
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Habilidades</h2>
+                <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-4 max-w-xl mx-auto">
+                    Tecnologias e ferramentas com as quais trabalho no dia a dia.
+                </p>
+            </div>
+
+            {{-- Swiper carousel -- SKILL-01, SKILL-02, SKILL-03, SKILL-04 --}}
+            {{-- .swiper-skills selector must match new Swiper('.swiper-skills') in app.js --}}
+            <div class="swiper swiper-skills overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+                    @foreach($skills as $skill)
+                        <div class="swiper-slide">
+                            <div class="bg-bg-primary border border-gray-800 rounded-xl p-6
+                                        flex flex-col items-center gap-3
+                                        hover:border-accent/50 hover:-translate-y-1
+                                        transition-all duration-300 cursor-default">
+                                {{-- Devicon icon -- SKILL-02 --}}
+                                <i class="{{ $skill['icon'] }} text-5xl"></i>
+                                <span class="text-sm font-medium text-gray-300">{{ $skill['name'] }}</span>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                {{-- Swiper pagination -- SKILL-04 --}}
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+
+        </div>
     </section>
 
     <section id="projects" class="min-h-screen flex items-center justify-center">
