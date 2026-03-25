@@ -54,9 +54,9 @@
 - [x] **CONTACT-01**: Formulário com campos: nome, e-mail, assunto e mensagem
 - [x] **CONTACT-02**: Validação server-side com feedback de erro inline
 - [x] **CONTACT-03**: Envio via Laravel Mail (SMTP) com mensagem chegando ao e-mail do proprietário
-- [ ] **CONTACT-04**: Feedback visual de sucesso/erro após envio
+- [x] **CONTACT-04**: Feedback visual de sucesso/erro após envio
 - [x] **CONTACT-05**: Rate limiting no endpoint de contato (máximo 5 envios/minuto por IP)
-- [ ] **CONTACT-06**: Links sociais visíveis na seção: GitHub, LinkedIn, WhatsApp, E-mail
+- [x] **CONTACT-06**: Links sociais visíveis na seção: GitHub, LinkedIn, WhatsApp, E-mail
 
 ### Visual e Animações
 
@@ -131,9 +131,9 @@
 | CONTACT-01 | Phase 3 | Complete |
 | CONTACT-02 | Phase 3 | Complete |
 | CONTACT-03 | Phase 3 | Complete |
-| CONTACT-04 | Phase 3 | Pending |
+| CONTACT-04 | Phase 3 | Complete |
 | CONTACT-05 | Phase 3 | Complete |
-| CONTACT-06 | Phase 3 | Pending |
+| CONTACT-06 | Phase 3 | Complete |
 | VIS-01 | Phase 2 | Complete |
 | VIS-02 | Phase 2 | Complete |
 | VIS-03 | Phase 2 | Complete |
