@@ -115,4 +115,16 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Owner Address
+    |--------------------------------------------------------------------------
+    |
+    | The email address where contact form submissions are delivered.
+    | Set MAIL_OWNER_ADDRESS in .env to the portfolio owner's real inbox.
+    |
+    */
+
+    'owner_address' => env('MAIL_OWNER_ADDRESS', ''),
+
 ];
