@@ -297,11 +297,16 @@
                             <input type="text"
                                    id="name"
                                    name="name"
+                                   value="{{ old('name') }}"
                                    placeholder="Seu nome completo"
-                                   class="w-full bg-bg-primary border border-gray-700 rounded-lg px-4 py-3
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                           text-white placeholder-gray-500
-                                          focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
-                                          transition-colors duration-300">
+                                          focus:outline-none focus:ring-1 transition-colors duration-300
+                                          @error('name') border-red-500 focus:border-red-500 focus:ring-red-500
+                                          @else border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                            @error('name')
+                                <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -311,11 +316,16 @@
                             <input type="email"
                                    id="email"
                                    name="email"
+                                   value="{{ old('email') }}"
                                    placeholder="seu@email.com"
-                                   class="w-full bg-bg-primary border border-gray-700 rounded-lg px-4 py-3
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                           text-white placeholder-gray-500
-                                          focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
-                                          transition-colors duration-300">
+                                          focus:outline-none focus:ring-1 transition-colors duration-300
+                                          @error('email') border-red-500 focus:border-red-500 focus:ring-red-500
+                                          @else border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                            @error('email')
+                                <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -325,11 +335,16 @@
                             <input type="text"
                                    id="subject"
                                    name="subject"
+                                   value="{{ old('subject') }}"
                                    placeholder="Sobre o que você quer falar?"
-                                   class="w-full bg-bg-primary border border-gray-700 rounded-lg px-4 py-3
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                           text-white placeholder-gray-500
-                                          focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
-                                          transition-colors duration-300">
+                                          focus:outline-none focus:ring-1 transition-colors duration-300
+                                          @error('subject') border-red-500 focus:border-red-500 focus:ring-red-500
+                                          @else border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                            @error('subject')
+                                <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -340,10 +355,14 @@
                                       name="message"
                                       rows="5"
                                       placeholder="Escreva sua mensagem aqui..."
-                                      class="w-full bg-bg-primary border border-gray-700 rounded-lg px-4 py-3
+                                      class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                              text-white placeholder-gray-500 resize-none
-                                             focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent
-                                             transition-colors duration-300"></textarea>
+                                             focus:outline-none focus:ring-1 transition-colors duration-300
+                                             @error('message') border-red-500 focus:border-red-500 focus:ring-red-500
+                                             @else border-gray-700 focus:border-accent focus:ring-accent @enderror">{{ old('message') }}</textarea>
+                            @error('message')
+                                <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <button type="submit"
@@ -395,7 +414,7 @@
                             </a>
 
                             {{-- WhatsApp --}}
-                            <a href="https://wa.me/55XXXXXXXXXXX"
+                            <a href="https://wa.me/5500000000000"
                                target="_blank" rel="noopener noreferrer"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
