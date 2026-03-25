@@ -22,17 +22,17 @@
 
 ### Seção Hero
 
-- [ ] **HERO-01**: Exibe nome completo (Ygor Stefankowski da Silva) e cargo (Desenvolvedor Full Stack)
-- [ ] **HERO-02**: Exibe foto de perfil ou imagem de fundo com overlay
-- [ ] **HERO-03**: Botão de chamada de ação (CTA) para seção de contato ou download de CV
-- [ ] **HERO-04**: Animação de entrada nos elementos do hero
+- [x] **HERO-01**: Exibe nome completo (Ygor Stefankowski da Silva) e cargo (Desenvolvedor Full Stack)
+- [x] **HERO-02**: Exibe foto de perfil ou imagem de fundo com overlay
+- [x] **HERO-03**: Botão de chamada de ação (CTA) para seção de contato ou download de CV
+- [x] **HERO-04**: Animação de entrada nos elementos do hero
 
 ### Seção Sobre
 
-- [ ] **ABOUT-01**: Exibe texto pessoal com trajetória e objetivo profissional
-- [ ] **ABOUT-02**: Exibe foto de perfil na seção sobre
-- [ ] **ABOUT-03**: Botão de download do CV em PDF
-- [ ] **ABOUT-04**: Animação de entrada com AOS ao rolar
+- [x] **ABOUT-01**: Exibe texto pessoal com trajetória e objetivo profissional
+- [x] **ABOUT-02**: Exibe foto de perfil na seção sobre
+- [x] **ABOUT-03**: Botão de download do CV em PDF
+- [x] **ABOUT-04**: Animação de entrada com AOS ao rolar
 
 ### Seção Skills
 
@@ -60,9 +60,9 @@
 
 ### Visual e Animações
 
-- [ ] **VIS-01**: Dark theme com acento azul elétrico consistente em todos os elementos interativos
+- [x] **VIS-01**: Dark theme com acento azul elétrico consistente em todos os elementos interativos
 - [x] **VIS-02**: Animações de entrada ao scroll com AOS em todas as seções
-- [ ] **VIS-03**: Transições hover suaves em botões, links e cards de projeto
+- [x] **VIS-03**: Transições hover suaves em botões, links e cards de projeto
 - [x] **VIS-04**: Google Fonts carregando corretamente em produção
 
 ### SEO e Compartilhamento
@@ -111,14 +111,14 @@
 | LAYOUT-03 | Phase 1 | Complete |
 | LAYOUT-04 | Phase 1 | Complete |
 | LAYOUT-05 | Phase 1 | Complete |
-| HERO-01 | Phase 2 | Pending |
-| HERO-02 | Phase 2 | Pending |
-| HERO-03 | Phase 2 | Pending |
-| HERO-04 | Phase 2 | Pending |
-| ABOUT-01 | Phase 2 | Pending |
-| ABOUT-02 | Phase 2 | Pending |
-| ABOUT-03 | Phase 2 | Pending |
-| ABOUT-04 | Phase 2 | Pending |
+| HERO-01 | Phase 2 | Complete |
+| HERO-02 | Phase 2 | Complete |
+| HERO-03 | Phase 2 | Complete |
+| HERO-04 | Phase 2 | Complete |
+| ABOUT-01 | Phase 2 | Complete |
+| ABOUT-02 | Phase 2 | Complete |
+| ABOUT-03 | Phase 2 | Complete |
+| ABOUT-04 | Phase 2 | Complete |
 | SKILL-01 | Phase 2 | Complete |
 | SKILL-02 | Phase 2 | Pending |
 | SKILL-03 | Phase 2 | Pending |
@@ -134,9 +134,9 @@
 | CONTACT-04 | Phase 3 | Pending |
 | CONTACT-05 | Phase 3 | Pending |
 | CONTACT-06 | Phase 3 | Pending |
-| VIS-01 | Phase 2 | Pending |
+| VIS-01 | Phase 2 | Complete |
 | VIS-02 | Phase 2 | Complete |
-| VIS-03 | Phase 2 | Pending |
+| VIS-03 | Phase 2 | Complete |
 | VIS-04 | Phase 1 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |

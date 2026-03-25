@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: Ready to execute
-stopped_at: Completed 02-core-ui-sections-A-PLAN.md
-last_updated: "2026-03-25T00:15:02.974Z"
+stopped_at: Completed 02-core-ui-sections-B-PLAN.md
+last_updated: "2026-03-25T00:17:39.037Z"
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 8
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-24)
 ## Current Position
 
 Phase: 02 (core-ui-sections) — EXECUTING
-Plan: 2 of 5
+Plan: 3 of 5
 
 ## Performance Metrics
 
@@ -50,6 +50,7 @@ Plan: 2 of 5
 | Phase 01-foundation PB | 4 | 2 tasks | 6 files |
 | Phase 01-foundation PC | 2 | 1 tasks | 1 files |
 | Phase 02-core-ui-sections PA | 5 | 2 tasks | 6 files |
+| Phase 02-core-ui-sections PB | 1 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,8 @@ Recent decisions affecting current work:
 - [Phase 02-core-ui-sections]: Swiper CSS imported in app.js (not app.css) to avoid Tailwind v4 cascade ordering issues
 - [Phase 02-core-ui-sections]: AOS.init() and new Swiper() wrapped in DOMContentLoaded — module scope silently fails in Vite builds
 - [Phase 02-core-ui-sections]: Devicon served from jsDelivr CDN to keep JS bundle size down
+- [Phase 02-core-ui-sections]: Bio text is a placeholder — user must personalize with real biography before Phase 4 deployment
+- [Phase 02-core-ui-sections]: CV download button uses download attribute to force file download instead of browser tab open
 
 ### Pending Todos
 
@@ -84,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-25T00:15:02.969Z
-Stopped at: Completed 02-core-ui-sections-A-PLAN.md
+Last session: 2026-03-25T00:17:39.033Z
+Stopped at: Completed 02-core-ui-sections-B-PLAN.md
 Resume file: None
