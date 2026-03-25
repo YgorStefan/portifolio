@@ -6,6 +6,7 @@
     <title>Ygor Stefankowski — Desenvolvedor Full Stack</title>
     <meta name="description" content="Portfólio de Ygor Stefankowski da Silva, Desenvolvedor Full Stack.">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body class="bg-gray-950 text-white antialiased" x-data>
     @include('partials.nav')
