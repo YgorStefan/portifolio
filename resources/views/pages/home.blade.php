@@ -87,8 +87,8 @@
                     </p>
 
                     {{-- CV download button -- ABOUT-03 --}}
-                    <a href="{{ asset('files/curriculo.pdf') }}"
-                       download="Curriculo-Ygor-Stefankowski.pdf"
+                    <a href="{{ asset('files/Currículo Ygor Stefankowski da Silva.pdf') }}"
+                       download="Curriculo-Ygor-Stefankowski-da-Silva.pdf"
                        class="inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
@@ -386,7 +386,7 @@
                         <div class="space-y-4">
 
                             {{-- GitHub --}}
-                            <a href="https://github.com/ygor-stefankowski"
+                            <a href="https://github.com/YgorStefan"
                                target="_blank" rel="noopener noreferrer"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
@@ -395,12 +395,12 @@
                                 </span>
                                 <div>
                                     <p class="font-medium text-white group-hover:text-accent transition-colors duration-300">GitHub</p>
-                                    <p class="text-sm">github.com/ygor-stefankowski</p>
+                                    <p class="text-sm">github.com/YgorStefan</p>
                                 </div>
                             </a>
 
                             {{-- LinkedIn --}}
-                            <a href="https://linkedin.com/in/ygor-stefankowski"
+                            <a href="https://www.linkedin.com/in/ygor-stefan/"
                                target="_blank" rel="noopener noreferrer"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
@@ -409,12 +409,12 @@
                                 </span>
                                 <div>
                                     <p class="font-medium text-white group-hover:text-accent transition-colors duration-300">LinkedIn</p>
-                                    <p class="text-sm">linkedin.com/in/ygor-stefankowski</p>
+                                    <p class="text-sm">linkedin.com/in/ygor-stefan</p>
                                 </div>
                             </a>
 
                             {{-- WhatsApp --}}
-                            <a href="https://wa.me/5500000000000"
+                            <a href="https://wa.me/5541996200546"
                                target="_blank" rel="noopener noreferrer"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
@@ -425,12 +425,12 @@
                                 </span>
                                 <div>
                                     <p class="font-medium text-white group-hover:text-accent transition-colors duration-300">WhatsApp</p>
-                                    <p class="text-sm">Clique para conversar</p>
+                                    <p class="text-sm">(41) 99620-0546</p>
                                 </div>
                             </a>
 
                             {{-- Email --}}
-                            <a href="mailto:ygor@example.com"
+                            <a href="mailto:ygor.stefan@gmail.com"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
                                              border border-gray-700 group-hover:border-accent/50 transition-colors duration-300">
@@ -441,7 +441,7 @@
                                 </span>
                                 <div>
                                     <p class="font-medium text-white group-hover:text-accent transition-colors duration-300">E-mail</p>
-                                    <p class="text-sm">ygor@example.com</p>
+                                    <p class="text-sm">ygor.stefan@gmail.com</p>
                                 </div>
                             </a>
 

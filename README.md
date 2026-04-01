@@ -78,4 +78,4 @@ Este projeto está sob a licença [MIT](LICENSE). Sinta-se à vontade para usá-
 
 ---
 
-Desenvolvido com ❤️ por [Ygor Stefan](https://github.com/YgorStefan)
+Desenvolvido com ❤️ por [Ygor Stefankowski da Silva](https://github.com/YgorStefan)
