@@ -443,7 +443,7 @@
                             </a>
 
                             {{-- Email --}}
-                            <a href="mailto:ygor.stefan@gmail.com"
+                            <a href="#contact" onclick="setTimeout(() => { document.getElementById('name').focus() }, 50)"
                                class="flex items-center gap-4 text-gray-400 hover:text-accent transition-colors duration-300 group">
                                 <span class="w-12 h-12 bg-bg-primary rounded-xl flex items-center justify-center
                                              border border-gray-700 group-hover:border-accent/50 transition-colors duration-300">
