@@ -19,6 +19,7 @@
         x-transition:leave-end="opacity-0 scale-75"
         @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
         class="fixed bottom-6 right-6 z-40 bg-accent hover:bg-blue-400 text-white rounded-full p-3 shadow-lg transition-colors cursor-pointer"
+        style="cursor: pointer;"
         aria-label="Voltar ao topo"
     >
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

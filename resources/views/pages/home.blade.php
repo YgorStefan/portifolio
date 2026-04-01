@@ -129,18 +129,31 @@
             {{-- Swiper carousel -- SKILL-01, SKILL-02, SKILL-03, SKILL-04 --}}
             <div class="relative" data-aos="fade-up" data-aos-delay="100">
                 {{-- Prev/next buttons outside .swiper to avoid Swiper's absolute-position conflicts --}}
-                <button class="swiper-skills-prev absolute left-0 md:-translate-x-4 -translate-x-2 top-1/2 -translate-y-1/2 z-30
+                <style>
+                    /* Força o pointer e exibe no mobile (sobrescreve 'hidden' caso haja resquícios do tailwind) */
+                    .swiper-skills-prev, .swiper-skills-next {
+                        display: flex !important;
+                        cursor: pointer !important;
+                        z-index: 30 !important;
+                    }
+                    /* No mobile ajusta as setas para não saírem da tela */
+                    @media (max-width: 768px) {
+                        .swiper-skills-prev { transform: translateY(-50%) translateX(0px) !important; }
+                        .swiper-skills-next { transform: translateY(-50%) translateX(0px) !important; }
+                    }
+                </style>
+                <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
                                bg-gray-800 hover:bg-accent border border-gray-700 hover:border-accent
-                               text-white rounded-full w-9 h-9 flex items-center justify-center
-                               transition-colors duration-200 cursor-pointer shadow-lg shadow-black/30">
+                               text-white rounded-full w-9 h-9 items-center justify-center
+                               transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <button class="swiper-skills-next absolute right-0 md:translate-x-4 translate-x-2 top-1/2 -translate-y-1/2 z-30
+                <button class="swiper-skills-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10
                                bg-gray-800 hover:bg-accent border border-gray-700 hover:border-accent
-                               text-white rounded-full w-9 h-9 flex items-center justify-center
-                               transition-colors duration-200 cursor-pointer shadow-lg shadow-black/30">
+                               text-white rounded-full w-9 h-9 items-center justify-center
+                               transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
