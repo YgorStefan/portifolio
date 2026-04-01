@@ -80,7 +80,7 @@ Plans:
   3. Visiting `yourdomain.com/.env` returns 403 or 404; `APP_DEBUG` is `false`; `public/build/` is present and assets load with no 404 errors; a real contact form submission from production delivers email to owner's inbox
 **Plans**: 2 plans
 Plans:
-- [ ] 04-01-PLAN.md — OG meta tags: inserir og:title, og:type, og:url, og:image, og:description no layout Blade e commitar
+- [x] 04-01-PLAN.md — OG meta tags: inserir og:title, og:type, og:url, og:image, og:description no layout Blade e commitar
 - [ ] 04-02-PLAN.md — Checklist de produção: deploy no Hostinger e verificação humana dos 5 itens (env, debug, assets, email, OG preview)
 
 ## Progress
@@ -93,7 +93,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 2/3 | In Progress|  |
 | 2. Core UI Sections | 5/5 | Complete   | 2026-03-25 |
 | 3. Contact Form Backend | 4/4 | Complete   | 2026-03-25 |
-| 4. Polish and Deploy | 0/2 | Not started | - |
+| 4. Polish and Deploy | 1/2 | In Progress|  |
 
 ---
 *Roadmap created: 2026-03-24*
