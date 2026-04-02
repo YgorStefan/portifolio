@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Melhorias & Correções
-status: Executing Phase 07
+status: v2.0 milestone complete
 stopped_at: "Completed 06-02-PLAN.md — toggle sol/lua navbar + classes dark: em home e footer"
-last_updated: "2026-04-02T21:57:54.052Z"
+last_updated: "2026-04-02T22:33:31.769Z"
 progress:
   total_phases: 3
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
 ---
 
 # Project State
@@ -23,8 +23,8 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 
 ## Current Position
 
-Phase: 07 (404-page-analytics) — EXECUTING
-Plan: 1 of 1
+Phase: 07
+Plan: Not started
 Phase: 06 — dark/light mode — NEXT
 Progress: `[ Phase 5 ] [ Phase 6 ] [ Phase 7 ]`
          `[  DONE ✓ ] [          ] [          ]`

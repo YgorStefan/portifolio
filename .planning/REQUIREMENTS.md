@@ -80,7 +80,7 @@
 
 ### Bug Fixes
 
-- [ ] **BUG-01**: Usuário vê a aba do Chrome parar de girar após o carregamento completo da página
+- [x] **BUG-01**: Usuário vê a aba do Chrome parar de girar após o carregamento completo da página
 - [x] **BUG-02**: Ícone do LinkedIn exibe cor neutra por padrão e muda para azul apenas no hover, igual aos demais ícones sociais
 - [x] **BUG-03**: Elementos com AOS animam ao rolar para baixo e ao rolar para cima (mirror mode ativo)
 - [x] **BUG-04**: Card de skill mantém borda azul do topo visível ao expandir no hover
@@ -95,11 +95,11 @@
 
 ### Erros
 
-- [ ] **ERR-01**: Usuário vê página de erro 404 customizada com mensagem amigável e link para voltar à home
+- [x] **ERR-01**: Usuário vê página de erro 404 customizada com mensagem amigável e link para voltar à home
 
 ### Analytics
 
-- [ ] **ANA-01**: Site registra visitas via solução de analytics sem cookies (Fathom ou Plausible)
+- [x] **ANA-01**: Site registra visitas via solução de analytics sem cookies (Umami Cloud)
 
 ## Future Requirements (Deferred)
 
@@ -162,14 +162,14 @@
 | ASSET-01 | Phase 2 | Complete |
 | ASSET-02 | Phase 2 | Complete |
 | ASSET-03 | Phase 2 | Complete |
-| BUG-01 | Phase 5 | Pending |
+| BUG-01 | Phase 5 | Complete |
 | BUG-02 | Phase 5 | Complete |
 | BUG-03 | Phase 5 | Complete |
 | BUG-04 | Phase 5 | Complete |
 | SKILL-05 | Phase 5 | Complete |
 | THEME-01 | Phase 6 | Complete |
-| ERR-01 | Phase 7 | Pending |
-| ANA-01 | Phase 7 | Pending |
+| ERR-01 | Phase 7 | Complete |
+| ANA-01 | Phase 7 | Complete |
 
 **v1.0 Coverage:**
 - v1 requirements: 41 total
