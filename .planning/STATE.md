@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Melhorias & Correções
-status: Ready to execute
-stopped_at: Completed 06-01-PLAN.md — infraestrutura de temas (script anti-FOUC + CSS vars light/dark)
-last_updated: "2026-04-02T17:15:19.473Z"
+status: Phase complete — ready for verification
+stopped_at: "Completed 06-02-PLAN.md — toggle sol/lua navbar + classes dark: em home e footer"
+last_updated: "2026-04-02T17:22:49.542Z"
 progress:
   total_phases: 3
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 5
-  completed_plans: 4
+  completed_plans: 5
 ---
 
 # Project State
@@ -73,6 +73,7 @@ Progress: `[ Phase 5 ] [ Phase 6 ] [ Phase 7 ]`
 | Phase 05-bug-fixes-new-skills P01 | 2 | 2 tasks | 2 files |
 | Phase 05-bug-fixes-new-skills P02 | 5 | 2 tasks | 2 files |
 | Phase 06-dark-light-mode P01 | 3 | 2 tasks | 2 files |
+| Phase 06-dark-light-mode P02 | 5 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -120,6 +121,7 @@ Recent decisions affecting current work:
 - [Phase 05-bug-fixes-new-skills]: onerror nos project cards requer this.onerror=null para evitar loop infinito quando o data URI de fallback também falha
 - [Phase 06-dark-light-mode]: Abordagem escolhida — Alpine.js + localStorage + classe .dark no html. @variant dark em app.css. Script inline no head para evitar flash de tema.
 - [Phase 06-dark-light-mode]: Script inline lê localStorage -> prefers-color-scheme -> dark (fallback); no-transition class removida após duplo requestAnimationFrame; @variant dark em app.css; :root:not(.dark) para light mode vars
+- [Phase 06-dark-light-mode]: Toggle sol/lua Alpine.js com $watch sincronizando estado dark com document.documentElement.classList e localStorage; SVGs inline de sol (x-show=dark) e lua (x-show=!dark) por botão
 
 ### Pending Todos
 
@@ -131,6 +133,6 @@ None blocking Phase 5.
 
 ## Session Continuity
 
-Last session: 2026-04-02T17:15:19.469Z
-Stopped at: Completed 06-01-PLAN.md — infraestrutura de temas (script anti-FOUC + CSS vars light/dark)
+Last session: 2026-04-02T17:22:49.538Z
+Stopped at: Completed 06-02-PLAN.md — toggle sol/lua navbar + classes dark: em home e footer
 Resume file: None

@@ -22,7 +22,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 ### v2.0 Melhorias & Correções
 
 - [ ] **Phase 5: Bug Fixes & New Skills** — Corrigir os 4 bugs visuais/funcionais do MVP e expandir o carrossel de skills
-- [ ] **Phase 6: Dark/Light Mode** — Toggle de tema escuro/claro persistido na navbar
+- [x] **Phase 6: Dark/Light Mode** — Toggle de tema escuro/claro persistido na navbar (completed 2026-04-02)
 - [ ] **Phase 7: 404 Page & Analytics** — Página de erro customizada e rastreamento de visitas sem cookies
 
 ## Phase Details
@@ -56,7 +56,7 @@ Plans:
 **Plans**: 2 planos
 Plans:
 - [x] 06-01-PLAN.md — Infraestrutura: script anti-FOUC no head + CSS @variant dark + variáveis light mode
-- [ ] 06-02-PLAN.md — Toggle sol/lua na navbar + classes dark: em home.blade.php e footer.blade.php
+- [x] 06-02-PLAN.md — Toggle sol/lua na navbar + classes dark: em home.blade.php e footer.blade.php
 **UI hint**: yes
 
 ### Phase 7: 404 Page & Analytics
@@ -78,7 +78,7 @@ Plans:
 | 3. Contact Form Backend | v1.0 | 4/4 | Complete | 2026-03-25 |
 | 4. Polish and Deploy | v1.0 | 2/2 | Complete | 2026-04-02 |
 | 5. Bug Fixes & New Skills | v2.0 | 2/3 | In Progress|  |
-| 6. Dark/Light Mode | v2.0 | 1/2 | In Progress|  |
+| 6. Dark/Light Mode | v2.0 | 2/2 | Complete   | 2026-04-02 |
 | 7. 404 Page & Analytics | v2.0 | 0/? | Not started | - |
 
 ---
