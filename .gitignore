@@ -26,6 +26,7 @@ deploy.sh
 
 # GSD Workflow
 /.planning
+/.claude
 
 # Databases
 database/*.sqlite
