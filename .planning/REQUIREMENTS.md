@@ -83,11 +83,11 @@
 - [ ] **BUG-01**: Usuário vê a aba do Chrome parar de girar após o carregamento completo da página
 - [x] **BUG-02**: Ícone do LinkedIn exibe cor neutra por padrão e muda para azul apenas no hover, igual aos demais ícones sociais
 - [x] **BUG-03**: Elementos com AOS animam ao rolar para baixo e ao rolar para cima (mirror mode ativo)
-- [ ] **BUG-04**: Card de skill mantém borda azul do topo visível ao expandir no hover
+- [x] **BUG-04**: Card de skill mantém borda azul do topo visível ao expandir no hover
 
 ### Habilidades
 
-- [ ] **SKILL-05**: Carrossel de skills exibe as novas tecnologias: PostgreSQL, Node.js, React, Python, Bootstrap, AWS, Git e um ícone representando IA/Machine Learning
+- [x] **SKILL-05**: Carrossel de skills exibe as novas tecnologias: PostgreSQL, Node.js, React, Python, Bootstrap, AWS, Git e um ícone representando IA/Machine Learning
 
 ### Visual
 
@@ -165,8 +165,8 @@
 | BUG-01 | Phase 5 | Pending |
 | BUG-02 | Phase 5 | Complete |
 | BUG-03 | Phase 5 | Complete |
-| BUG-04 | Phase 5 | Pending |
-| SKILL-05 | Phase 5 | Pending |
+| BUG-04 | Phase 5 | Complete |
+| SKILL-05 | Phase 5 | Complete |
 | THEME-01 | Phase 6 | Pending |
 | ERR-01 | Phase 7 | Pending |
 | ANA-01 | Phase 7 | Pending |

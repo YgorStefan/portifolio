@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Melhorias & Correções
 status: executing
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-04-02T16:13:32.030Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-04-02T16:17:10.935Z"
 last_activity: 2026-04-02
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
 ---
 
 # Project State
@@ -25,7 +25,7 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 05 (bug-fixes-new-skills) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-04-02
 
@@ -74,6 +74,7 @@ Progress: `[ Phase 5 ] [ Phase 6 ] [ Phase 7 ]`
 | Phase 03 P04 | 3 min | 2 tasks | 0 files |
 | Phase 04-polish-and-deploy P01 | 2 min | 2 tasks | 1 files |
 | Phase 05-bug-fixes-new-skills P01 | 2 | 2 tasks | 2 files |
+| Phase 05-bug-fixes-new-skills P02 | 5 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -116,6 +117,8 @@ Recent decisions affecting current work:
 - [Phase 04-polish-and-deploy]: og:url usa config('app.url') para resolução via env APP_URL; og:image usa asset() para URL absoluta compatível com redes sociais
 - [Phase 05-bug-fixes-new-skills]: AOS configurado com mirror:true e once:false; elementos Hero usam data-aos-once=true para animar apenas uma vez
 - [Phase 05-bug-fixes-new-skills]: Classe 'colored' removida do devicon LinkedIn — substituída por text-gray-400 group-hover:text-accent para consistência com demais ícones sociais
+- [Phase 05-bug-fixes-new-skills]: hover:-translate-y-1 substituído por hover:shadow-md hover:shadow-accent/20 no skill card — translate causa clipping da borda superior dentro do swiper-slide
+- [Phase 05-bug-fixes-new-skills]: IA/ML usa SVG inline com stroke paths sem URLs externas — seguro para CSP e sem dependência de CDN adicional
 
 ### Pending Todos
 
@@ -128,6 +131,6 @@ None blocking Phase 5.
 
 ## Session Continuity
 
-Last session: 2026-04-02T16:13:32.025Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-04-02T16:17:10.931Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

@@ -40,7 +40,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 **Plans**: 3 planos
 Plans:
 - [x] 05-01-PLAN.md — BUG-02 (LinkedIn colored) + BUG-03 (AOS mirror mode)
-- [ ] 05-02-PLAN.md — BUG-04 (skill card border) + SKILL-05 (18 skills + IA/ML SVG)
+- [x] 05-02-PLAN.md — BUG-04 (skill card border) + SKILL-05 (18 skills + IA/ML SVG)
 - [ ] 05-03-PLAN.md — BUG-01 (Chrome spinner: diagnóstico + fix)
 **UI hint**: yes
 
@@ -74,7 +74,7 @@ Plans:
 | 2. Core UI Sections | v1.0 | 5/5 | Complete | 2026-03-25 |
 | 3. Contact Form Backend | v1.0 | 4/4 | Complete | 2026-03-25 |
 | 4. Polish and Deploy | v1.0 | 2/2 | Complete | 2026-04-02 |
-| 5. Bug Fixes & New Skills | v2.0 | 1/3 | In Progress|  |
+| 5. Bug Fixes & New Skills | v2.0 | 2/3 | In Progress|  |
 | 6. Dark/Light Mode | v2.0 | 0/? | Not started | - |
 | 7. 404 Page & Analytics | v2.0 | 0/? | Not started | - |
 
