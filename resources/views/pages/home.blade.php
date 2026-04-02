@@ -164,10 +164,28 @@
                             <div class="swiper-slide">
                                 <div class="bg-bg-primary border border-gray-800 rounded-xl p-6
                                             flex flex-col items-center gap-3
-                                            hover:border-accent/50 hover:-translate-y-1
+                                            hover:border-accent/50 hover:shadow-md hover:shadow-accent/20
                                             transition-all duration-300 cursor-default">
-                                    {{-- Ícone devicon --}}
-                                    <i class="{{ $skill['icon'] }} text-5xl"></i>
+                                    {{-- Ícone: SVG inline para IA/ML, Devicon para demais --}}
+                                    @if($skill['name'] === 'IA/ML')
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 24 24" fill="none"
+                                             stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                             aria-hidden="true">
+                                            <path d="M9.5 2a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/>
+                                            <path d="M14.5 2a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5z"/>
+                                            <path d="M12 9.5V12"/>
+                                            <path d="M9.5 7v2.5"/>
+                                            <path d="M14.5 7v2.5"/>
+                                            <path d="M5 12a7 7 0 0 0 14 0"/>
+                                            <path d="M5 12H3"/>
+                                            <path d="M19 12h2"/>
+                                            <path d="M12 19v2"/>
+                                            <path d="M8.5 17.5l-1.5 1.5"/>
+                                            <path d="M15.5 17.5l1.5 1.5"/>
+                                        </svg>
+                                    @else
+                                        <i class="{{ $skill['icon'] }} text-5xl"></i>
+                                    @endif
                                     <span class="text-sm font-medium text-gray-300">{{ $skill['name'] }}</span>
                                 </div>
                             </div>
