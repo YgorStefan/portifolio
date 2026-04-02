@@ -31,14 +31,23 @@
                         :aria-checked="dark"
                         role="switch"
                         aria-label="Alternar tema"
-                        class="relative inline-flex items-center w-11 h-6 rounded-full cursor-pointer
+                        class="relative inline-flex items-center w-12 h-6 rounded-full cursor-pointer
                                bg-gray-300 dark:bg-accent
                                transition-colors duration-200"
                     >
                         <span
                             :class="dark ? 'translate-x-6' : 'translate-x-1'"
-                            class="inline-block w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                        ></span>
+                            class="inline-flex items-center justify-center w-5 h-5 bg-white rounded-full shadow transition-transform duration-200"
+                        >
+                            {{-- Sol (light mode) --}}
+                            <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+                            </svg>
+                            {{-- Lua (dark mode) --}}
+                            <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                            </svg>
+                        </span>
                     </button>
                 </li>
             </ul>
@@ -49,14 +58,21 @@
                 :aria-checked="dark"
                 role="switch"
                 aria-label="Alternar tema"
-                class="md:hidden relative inline-flex items-center w-11 h-6 rounded-full cursor-pointer
+                class="md:hidden relative inline-flex items-center w-12 h-6 rounded-full cursor-pointer
                        bg-gray-300 dark:bg-accent
                        transition-colors duration-200"
             >
                 <span
                     :class="dark ? 'translate-x-6' : 'translate-x-1'"
-                    class="inline-block w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                ></span>
+                    class="inline-flex items-center justify-center w-5 h-5 bg-white rounded-full shadow transition-transform duration-200"
+                >
+                    <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+                    </svg>
+                    <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                    </svg>
+                </span>
             </button>
 
             {{-- Botão menu (mobile) --}}
