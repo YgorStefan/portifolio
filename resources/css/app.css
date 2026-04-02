@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Configurar dark mode por classe (.dark no <html>) em vez de media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 }
