@@ -13,9 +13,25 @@
         class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition-colors duration-150">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-            {{-- Logo --}}
-            <a href="#hero" class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hover:text-accent transition-colors">
-                YS
+            {{-- Logo com hover expand --}}
+            <a href="#hero"
+               x-data="{ expanded: false }"
+               @mouseenter="expanded = true"
+               @mouseleave="expanded = false"
+               @click.outside="expanded = false"
+               class="font-bold text-gray-900 dark:text-white text-lg tracking-tight hover:text-accent transition-colors inline-flex items-center"
+               style="white-space: nowrap; overflow: hidden;"
+            >
+                <span x-show="!expanded">YSS</span>
+                <span
+                    x-show="expanded"
+                    x-transition:enter="transition-[max-width,opacity] duration-300 ease-out"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition-[max-width,opacity] duration-300 ease-in"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                >Ygor Stefankowski da Silva</span>
             </a>
 
             {{-- Links desktop --}}
