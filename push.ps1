@@ -6,7 +6,7 @@ param(
 $SERVER_IP   = "147.93.14.101"
 $SERVER_PORT = "65002"
 $SERVER_USER = "u697575747"
-$REMOTE_DIR  = "~/portfolio"
+$REMOTE_DIR  = "~/domains/ygorstefan.com/portfolio"
 $KEY_FILE    = "$env:USERPROFILE\.ssh\id_rsa"
 
 if ($Setup) { $SetupFlag = "--setup" } else { $SetupFlag = "" }
