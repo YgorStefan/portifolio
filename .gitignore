@@ -22,7 +22,6 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
-deploy.sh
 
 # GSD Workflow
 /.planning
@@ -31,3 +30,4 @@ deploy.sh
 # Databases
 database/*.sqlite
 database/*.sqlite-journal
+.env.deploy
