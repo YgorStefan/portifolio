@@ -1,26 +1,46 @@
 [
   {
-    "title": "Portfólio Pessoal",
+    "title": "Portfólio",
     "description": "Site de portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das habilidades técnicas.",
     "image": "portfolio.jpg",
     "url": "https://ygorstefan.com",
     "repo": "https://github.com/YgorStefan/portifolio",
-    "tags": ["PHP", "Laravel", "Tailwind CSS", "Alpine.js", "JavaScript"]
+    "tags": [
+      "PHP",
+      "Laravel",
+      "Tailwind CSS",
+      "Alpine.js",
+      "JavaScript"
+    ]
   },
   {
-    "title": "Sistema CRM",
+    "title": "CRM (Customer Relationship Management)",
     "description": "Sistema de gestão de clientes com PHP, MySQL e Chart.js",
     "image": "crm.jpg",
-    "url": null,
+    "url": "https://ygorstefan.com/crm",
     "repo": "https://github.com/YgorStefan/crm",
-    "tags": ["PHP", "MySQL", "PDO", "Tailwind CSS", "JavaScript", "Chart.js"]
+    "tags": [
+      "PHP",
+      "MySQL",
+      "PDO",
+      "Tailwind CSS",
+      "JavaScript",
+      "Chart.js"
+    ]
   },
   {
     "title": "E-commerce",
     "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL",
     "image": "ecommerce.jpg",
-    "url": null,
+    "url": "https://ygorstefan.com/ecommerce",
     "repo": "https://github.com/YgorStefan/ecommerce",
-    "tags": ["NestJS", "TypeScript", "Next.js", "PostgreSQL", "Tailwind CSS", "Docker"]
+    "tags": [
+      "NestJS",
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker"
+    ]
   }
 ]

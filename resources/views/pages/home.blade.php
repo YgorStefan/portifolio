@@ -22,13 +22,13 @@
             {{-- Cargo --}}
             <p class="text-xl md:text-2xl text-accent font-semibold mb-4"
                data-aos="fade-up" data-aos-delay="200" data-aos-once="true">
-                Desenvolvedor Full Stack
+                Analista de Sistemas e Desenvolvedor Full Stack
             </p>
 
             {{-- Slogan --}}
             <p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto"
                data-aos="fade-up" data-aos-delay="300" data-aos-once="true">
-                Criando soluções web modernas com PHP, Laravel e JavaScript.
+                Criando soluções modernas com PHP, Laravel e JavaScript.
             </p>
 
             {{-- Botões de ação --}}
@@ -71,19 +71,20 @@
                 {{-- Texto bio --}}
                 <div class="flex-1" data-aos="fade-right">
                     <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-                        Olá! Sou o Ygor, desenvolvedor full stack apaixonado por criar experiências
-                        digitais modernas e funcionais. Com foco em PHP e Laravel no back-end e
-                        JavaScript no front-end, transformo ideias em aplicações web robustas e
-                        escaláveis.
+                        Bom dia, boa tarde, boa noite! Sou o Ygor, analista de sistemas e desenvolvedor full stack 
+                        apaixonado por criar experiências digitais modernas e funcionais há mais de 10 anos. Com 
+                        amplo conhecimento em PHP, Laravel e JavaScript, reuno e transformo ideias em aplicações
+                        robustas e escaláveis seguindo a arquitetura MVC.
                     </p>
                     <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
                         Minha trajetória começou pela curiosidade em entender como as coisas funcionam
-                        por baixo dos panos. Hoje trabalho com a stack completa — do banco de dados
-                        à interface — sempre com atenção à qualidade do código e à experiência do usuário.
+                        por baixo dos panos, sempre com um perfil autodidata. Hoje trabalho com a stack completa, 
+                        do banco de dados (MySQL, PostgreSQL) à interface (HTML, CSS, JavaScript, Vue.js), 
+                        sempre prezando pela qualidade do código e experiência do usuário.
                     </p>
                     <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10">
-                        Estou em busca de oportunidades onde possa contribuir com soluções técnicas
-                        sólidas e continuar crescendo como profissional.
+                        Sempre estou em busca de novas oportunidades onde possa contribuir com soluções técnicas,
+                        sólidas, escaláveis e continuar evoluindo como pessoa e profissional.
                     </p>
 
                     {{-- Download do CV --}}
@@ -205,7 +206,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Projetos</h2>
                 <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
                 <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
-                    Alguns dos projetos que desenvolvi — clique para ver o código ou a demo.
+                    Alguns dos projetos que desenvolvi ou estou desenvolvendo, clique para ver o código ou a demo.
                 </p>
             </div>
 
@@ -286,7 +287,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">Contato</h2>
                 <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
                 <p class="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto">
-                    Tem um projeto em mente ou quer bater um papo? Manda uma mensagem!
+                    Tem um projeto em mente? Me mande uma mensagem!
                 </p>
             </div>
 
@@ -415,7 +416,7 @@
                 <div class="space-y-8" data-aos="fade-left">
 
                     <div>
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Onde me encontrar</h3>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Onde me encontrar:</h3>
                         <div class="space-y-4">
 
                             {{-- GitHub --}}
@@ -488,7 +489,7 @@
                             <span class="text-gray-900 dark:text-white font-medium">Disponível para novas oportunidades</span>
                         </div>
                         <p class="text-gray-500 dark:text-gray-400 text-sm">
-                            Estou aberto a propostas de emprego CLT, PJ ou freela. Respondo em até 24h.
+                            Estou aberto a propostas de emprego CLT, PJ ou projetos de curto prazo. Respondo em até 24h.
                         </p>
                     </div>
 
