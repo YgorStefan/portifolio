@@ -10,6 +10,7 @@
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:image" content="{{ asset('images/profile.jpg') }}">
     <meta property="og:description" content="Portfólio de Ygor Stefankowski da Silva, Desenvolvedor Full Stack.">
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
     <script>
         (function() {
             var saved = localStorage.getItem('theme');
