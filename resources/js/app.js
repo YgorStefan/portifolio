@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ParticleCanvas } from './particles.js';
 
 Alpine.plugin(intersect);
 window.Alpine = Alpine;
@@ -36,4 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
             1024: { slidesPerView: 5, spaceBetween: 24 },
         },
     });
+
+    // Partículas interativas — D-11: instanciado 3x a partir de módulo único
+    new ParticleCanvas('#hero');
+    new ParticleCanvas('#about');
+    new ParticleCanvas('#projects');
 });
