@@ -56,7 +56,7 @@
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-bg-primary">
+    <section id="about" class="py-24 bg-bg-primary relative overflow-hidden">
         <div class="container mx-auto px-6">
 
             {{-- Título da seção --}}
@@ -197,7 +197,7 @@
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-bg-primary">
+    <section id="projects" class="py-24 bg-bg-primary relative overflow-hidden">
         <div class="container mx-auto px-6">
 
             {{-- Título da seção --}}
