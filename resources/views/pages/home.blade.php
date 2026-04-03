@@ -8,7 +8,7 @@
 
             {{-- Foto de perfil --}}
             <div class="mb-6" data-aos="fade-down" data-aos-once="true">
-                <img src="{{ asset('images/profile.jpg') }}"
+                <img src="{{ asset('images/cartoon.jpeg') }}"
                      alt="Ygor Stefankowski da Silva"
                      class="w-36 h-36 rounded-full object-cover border-4 border-accent mx-auto shadow-lg shadow-accent/20">
             </div>
@@ -102,7 +102,7 @@
                 {{-- Coluna da foto --}}
                 <div class="flex-shrink-0" data-aos="fade-left">
                     <div class="relative">
-                        <img src="{{ asset('images/profile.jpg') }}"
+                        <img src="{{ asset('images/cartoon.jpeg') }}"
                              alt="Ygor Stefankowski da Silva"
                              class="w-64 h-64 rounded-2xl object-cover border-2 border-accent/30 shadow-xl shadow-accent/10">
                         {{-- Borda decorativa --}}
