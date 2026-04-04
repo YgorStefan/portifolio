@@ -32,7 +32,7 @@
     "title": "E-commerce",
     "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL",
     "image": "ecommerce.jpg",
-    "url": "https://ygorstefan.com/ecommerce",
+    "url": "https://frontend-nine-mocha-28.vercel.app/",
     "repo": "https://github.com/YgorStefan/ecommerce",
     "tags": [
       "NestJS",
