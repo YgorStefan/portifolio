@@ -29,6 +29,20 @@
     ]
   },
   {
+    "title": "CDP (Catálogo de Produtos)",
+    "description": "Aplicação React para gerenciamento de produtos organizados por marcas, com drawer lateral para formulários, cores personalizadas por marca e persistência via localStorage.",
+    "image": "cdp.jpg",
+    "url": "https://cards-one-xi.vercel.app/",
+    "repo": "https://github.com/YgorStefan/cards",
+    "tags": [
+      "React",
+      "JavaScript",
+      "CSS",
+      "localStorage",
+      "Jest"
+    ]
+  },
+  {
     "title": "E-commerce",
     "description": "Plataforma e-commerce full stack com Next.js, NestJS e PostgreSQL",
     "image": "ecommerce.jpg",

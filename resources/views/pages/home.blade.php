@@ -317,6 +317,7 @@
                             <input type="text"
                                    id="name"
                                    name="name"
+                                   autocomplete="name"
                                    value="{{ old('name') }}"
                                    placeholder="Seu nome completo"
                                    class="w-full bg-bg-primary border rounded-lg px-4 py-3
@@ -336,6 +337,7 @@
                             <input type="email"
                                    id="email"
                                    name="email"
+                                   autocomplete="email"
                                    value="{{ old('email') }}"
                                    placeholder="seu@email.com"
                                    class="w-full bg-bg-primary border rounded-lg px-4 py-3
@@ -355,6 +357,7 @@
                             <input type="text"
                                    id="subject"
                                    name="subject"
+                                   autocomplete="off"
                                    value="{{ old('subject') }}"
                                    placeholder="Sobre o que você quer falar?"
                                    class="w-full bg-bg-primary border rounded-lg px-4 py-3
@@ -374,6 +377,7 @@
                             <textarea id="message"
                                       name="message"
                                       rows="5"
+                                      autocomplete="off"
                                       placeholder="Escreva sua mensagem aqui..."
                                       class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                              text-gray-900 dark:text-white placeholder-gray-500 resize-none
