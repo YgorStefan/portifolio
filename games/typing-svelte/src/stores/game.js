@@ -7,5 +7,5 @@ export const typed    = writable('')
 export const gameOver = writable(false)
 
 export const activeEnemy = derived(enemies, $enemies =>
-  $enemies.find(e => !e.destroyed) ?? null
+  $enemies.filter(e => !e.destroyed).sort((a, b) => b.y - a.y)[0] ?? null
 )

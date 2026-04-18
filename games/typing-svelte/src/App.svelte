@@ -10,6 +10,7 @@
   let spawnId = null
   let enemyId = 0
   let arenaHeight = 400
+  let lastTime = 0
 
   const FALL_SPEED = 0.4
   const SPAWN_INTERVAL_MS = 3500
@@ -27,12 +28,14 @@
     enemies.update(list => [...list, { id: enemyId++, command, x, y: -60, destroyed: false }])
   }
 
-  function gameLoop() {
+  function gameLoop(timestamp = 0) {
     if ($gameOver) return
+    const delta = lastTime === 0 ? 16.67 : timestamp - lastTime
+    lastTime = timestamp
     enemies.update(list =>
       list.map(e => {
         if (e.destroyed) return e
-        const newY = e.y + FALL_SPEED
+        const newY = e.y + FALL_SPEED * (delta / 16.67)
         if (newY > arenaHeight - GROUND_OFFSET) {
           lives.update(l => l - 1)
           return { ...e, destroyed: true }
@@ -50,6 +53,8 @@
     loopId = requestAnimationFrame(gameLoop)
   }
 
+  // Each keystroke is captured in real-time so I can match what the player has
+  // typed so far against the active enemy's command and destroy it on a full match.
   function handleKeydown(e) {
     if ($gameOver) return
     if (e.key === 'Backspace') {

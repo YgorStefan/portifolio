@@ -16,7 +16,7 @@ function createEmptyRows(): GuessRow[] {
 }
 
 export default function App() {
-  const [target] = useState(getDailyWord)
+  const [target, setTarget] = useState(getDailyWord)
   const [rows, setRows] = useState<GuessRow[]>(createEmptyRows)
   const [currentRow, setCurrentRow] = useState(0)
   const [currentLetters, setCurrentLetters] = useState<string[]>([])
@@ -24,6 +24,16 @@ export default function App() {
   const [status, setStatus] = useState<'playing' | 'won' | 'lost'>('playing')
   const [stats, setStats] = useState<Stats>(loadStats)
   const [message, setMessage] = useState('')
+
+  function resetGame() {
+    setTarget(getDailyWord())
+    setRows(createEmptyRows())
+    setCurrentRow(0)
+    setCurrentLetters([])
+    setLetterStates({})
+    setStatus('playing')
+    setMessage('')
+  }
 
   function showMessage(msg: string) {
     setMessage(msg)
@@ -116,6 +126,14 @@ export default function App() {
       <main className="flex flex-col items-center justify-center flex-1 px-4 py-6">
         {message && (
           <div className="mb-4 px-4 py-2 rounded bg-gray-700 text-white text-sm font-semibold">{message}</div>
+        )}
+        {status !== 'playing' && (
+          <button
+            onClick={resetGame}
+            className="mb-4 px-6 py-2 rounded bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm"
+          >
+            Jogar novamente
+          </button>
         )}
         <Grid rows={rows} currentRow={currentRow} currentLetters={currentLetters} />
         <Keyboard letterStates={letterStates} onKey={handleKey} />

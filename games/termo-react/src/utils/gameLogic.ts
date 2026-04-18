@@ -1,5 +1,5 @@
 import { WORDS } from './wordList'
-import type { LetterState } from '../types'
+import type { LetterState, Stats } from '../types'
 
 export function getDailyWord(): string {
   const start = new Date(new Date().getFullYear(), 0, 0)
@@ -8,6 +8,8 @@ export function getDailyWord(): string {
   return WORDS[dayOfYear % WORDS.length]
 }
 
+// Uso duas passagens: na primeira marco as posições exatas; na segunda verifico
+// as letras restantes para evitar contar duplicatas duas vezes.
 export function validateGuess(guess: string, target: string): LetterState[] {
   const result: LetterState[] = Array(5).fill('absent')
   const targetArr = target.split('')
@@ -35,7 +37,7 @@ export function validateGuess(guess: string, target: string): LetterState[] {
 
 const STORAGE_KEY = 'techdle_stats'
 
-export function loadStats() {
+export function loadStats(): Stats {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     return raw ? JSON.parse(raw) : { wins: 0, losses: 0, streak: 0, lastPlayed: '', lastResult: null }

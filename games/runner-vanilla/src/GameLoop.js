@@ -16,10 +16,12 @@ export class GameLoop {
     this.spawnInterval = 90
   }
 
+  // I increase speed every 500 points so the game gets progressively harder without a sudden spike
   _updateSpeed() {
     this.speed = 5 + Math.floor(this.score / 500) * 0.5
   }
 
+  // I use AABB (axis-aligned bounding box) — check that neither rectangle's edge has passed the other on both axes
   _checkCollision(a, b) {
     return (
       a.x              < b.x + b.width  &&

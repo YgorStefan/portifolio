@@ -27,6 +27,7 @@ onUnmounted(stopTimer)
 
 const matchedCount = computed(() => cards.value.filter(c => c.isMatched).length)
 const allMatched = computed(() => matchedCount.value === cards.value.length)
+// I use isBlocked to freeze input while two cards are face-up, giving the player time to see them before they flip back
 const isBlocked = computed(() => flippedUids.value.length === 2)
 
 function flipCard(uid) {

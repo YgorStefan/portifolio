@@ -26,4 +26,11 @@ document.addEventListener('keydown', e => {
 })
 
 canvas.addEventListener('click', handleJump)
-canvas.addEventListener('touchstart', e => { e.preventDefault(); handleJump() })
+canvas.addEventListener('touchstart', e => { e.preventDefault(); handleJump() }, { passive: false })
+
+window.addEventListener('resize', () => {
+  canvas.width = Math.min(window.innerWidth - 32, 800)
+  game.stop()
+  game = new GameLoop(canvas)
+  game.start()
+})
