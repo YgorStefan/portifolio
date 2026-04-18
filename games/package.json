@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-games",
+  "private": true,
+  "scripts": {
+    "build:all": "npm run build --prefix memory-vue && npm run build --prefix termo-react && npm run build --prefix runner-vanilla && npm run build --prefix typing-svelte && node deploy.js"
+  }
+}
