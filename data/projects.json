@@ -1,34 +1,5 @@
 [
   {
-    "title": "Portfólio",
-    "description": "Site desse portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das minhas habilidades.",
-    "image": "portfolio.jpg",
-    "url": "https://ygorstefan.com",
-    "repo": "https://github.com/YgorStefan/portifolio",
-    "tags": [
-      "PHP",
-      "Laravel",
-      "Tailwind CSS",
-      "Alpine.js",
-      "JavaScript"
-    ]
-  },
-  {
-    "title": "CRM (Customer Relationship Management)",
-    "description": "Sistema de gestão de clientes com PHP, MySQL e Chart.js. Um projeto em que precisei fazer para uma empresa de vendas.",
-    "image": "crm.jpg",
-    "url": "https://ygorstefan.com/crm",
-    "repo": "https://github.com/YgorStefan/crm",
-    "tags": [
-      "PHP",
-      "MySQL",
-      "PDO",
-      "Tailwind CSS",
-      "JavaScript",
-      "Chart.js"
-    ]
-  },
-  {
     "title": "CDP (Catálogo de Produtos)",
     "description": "Aplicação React para gerenciamento de produtos organizados por marcas, com drawer lateral para formulários, cores personalizadas por marca e persistência via localStorage.",
     "image": "cdp.jpg",
@@ -40,6 +11,21 @@
       "CSS",
       "localStorage",
       "Jest"
+    ]
+  },
+  {
+    "title": "CRM (Customer Relationship Management)",
+    "description": "Sistema empresarial de gestão de clientes com kanban, usando PHP, MySQL, Chart.js, Tailwind e JavaScript.",
+    "image": "crm.jpg",
+    "url": "https://ygorstefan.com/crm",
+    "repo": "https://github.com/YgorStefan/crm",
+    "tags": [
+      "PHP",
+      "MySQL",
+      "PDO",
+      "Tailwind CSS",
+      "JavaScript",
+      "Chart.js"
     ]
   },
   {
@@ -55,6 +41,20 @@
       "PostgreSQL",
       "Tailwind CSS",
       "Docker"
+    ]
+  },
+  {
+    "title": "Portfólio",
+    "description": "Site desse portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das minhas habilidades.",
+    "image": "portfolio.jpg",
+    "url": "https://ygorstefan.com",
+    "repo": "https://github.com/YgorStefan/portifolio",
+    "tags": [
+      "PHP",
+      "Laravel",
+      "Tailwind CSS",
+      "Alpine.js",
+      "JavaScript"
     ]
   }
 ]
