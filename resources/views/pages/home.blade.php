@@ -101,7 +101,7 @@
                 </div>
 
                 {{-- Coluna da foto --}}
-                <div class="flex-shrink-0" data-aos="fade-left">
+                <div class="shrink-0" data-aos="fade-left">
                     <div class="relative">
                         <img src="{{ asset('images/cartoon.jpeg') }}"
                              alt="Ygor Stefankowski da Silva"
@@ -128,21 +128,15 @@
             </div>
 
             {{-- Carrossel de habilidades --}}
-            <div class="relative overflow-hidden md:overflow-visible" data-aos="fade-up" data-aos-delay="100">
-                <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10
-                               bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent
-                               text-gray-700 dark:text-white rounded-full w-9 h-9 flex items-center justify-center
-                               transition-colors duration-200">
+            <div class="relative md:overflow-visible" data-aos="fade-up" data-aos-delay="100">
+                <button class="swiper-skills-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent text-gray-700 dark:text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
-                <button class="swiper-skills-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10
-                               bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent
-                               text-gray-700 dark:text-white rounded-full w-9 h-9 items-center justify-center
-                               transition-colors duration-200">
+                <button class="swiper-skills-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-gray-200 dark:bg-gray-800 hover:bg-accent border border-gray-300 dark:border-gray-700 hover:border-accent text-gray-700 dark:text-white rounded-full w-9 h-9 flex items-center justify-center transition-colors duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
                 </button>
                 <div class="swiper swiper-skills">
@@ -201,7 +195,7 @@
                                 hover:border-accent/60 hover:bg-accent/10 transition-all duration-300 group">
 
                         {{-- Ícone de cadeado --}}
-                        <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center
+                        <div class="shrink-0 w-11 h-11 rounded-xl bg-accent/15 flex items-center justify-center
                                     group-hover:bg-accent/25 transition-colors duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-accent" fill="none"
                                  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -221,7 +215,7 @@
                         </p>
 
                         {{-- Brilho decorativo --}}
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0
+                        <div class="absolute inset-0 rounded-2xl bg-linear-to-r from-accent/0 via-accent/5 to-accent/0
                                     opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                     </div>
                 </div>
@@ -282,7 +276,7 @@
                             @if($project['repo'])
                                 <a href="{{ $project['repo'] }}"
                                    target="_blank" rel="noopener noreferrer"
-                                   class="border border-white text-white hover:border-accent hover:text-accent
+                                   class="border border-[#707070] text-[#707070] dark:border-white dark:text-white hover:border-accent hover:text-accent
                                           px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors duration-300">
                                     Repositório
                                 </a>
@@ -351,11 +345,7 @@
                                    autocomplete="name"
                                    value="{{ old('name') }}"
                                    placeholder="Seu nome completo"
-                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
-                                          text-gray-900 dark:text-white placeholder-gray-500
-                                          focus:outline-none focus:ring-1 transition-colors duration-300
-                                          @error('name') border-red-500 focus:border-red-500 focus:ring-red-500
-                                          @else border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 transition-colors duration-300 {{ $errors->has('name') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">
                             @error('name')
                                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                             @enderror
@@ -371,11 +361,7 @@
                                    autocomplete="email"
                                    value="{{ old('email') }}"
                                    placeholder="seu@email.com"
-                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
-                                          text-gray-900 dark:text-white placeholder-gray-500
-                                          focus:outline-none focus:ring-1 transition-colors duration-300
-                                          @error('email') border-red-500 focus:border-red-500 focus:ring-red-500
-                                          @else border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 transition-colors duration-300 {{ $errors->has('email') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">
                             @error('email')
                                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                             @enderror
@@ -391,11 +377,7 @@
                                    autocomplete="off"
                                    value="{{ old('subject') }}"
                                    placeholder="Sobre o que você quer falar?"
-                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3
-                                          text-gray-900 dark:text-white placeholder-gray-500
-                                          focus:outline-none focus:ring-1 transition-colors duration-300
-                                          @error('subject') border-red-500 focus:border-red-500 focus:ring-red-500
-                                          @else border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent @enderror">
+                                   class="w-full bg-bg-primary border rounded-lg px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-1 transition-colors duration-300 {{ $errors->has('subject') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">
                             @error('subject')
                                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                             @enderror
@@ -413,8 +395,7 @@
                                       class="w-full bg-bg-primary border rounded-lg px-4 py-3
                                              text-gray-900 dark:text-white placeholder-gray-500 resize-none
                                              focus:outline-none focus:ring-1 transition-colors duration-300
-                                             @error('message') border-red-500 focus:border-red-500 focus:ring-red-500
-                                             @else border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent @enderror">{{ old('message') }}</textarea>
+                                             {{ $errors->has('message') ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-700 focus:border-accent focus:ring-accent' }}">{{ old('message') }}</textarea>
                             @error('message')
                                 <p class="mt-1 text-sm text-red-400">{{ $message }}</p>
                             @enderror

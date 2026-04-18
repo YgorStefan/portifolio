@@ -1,11 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-/* Configurar dark mode por classe (.dark no <html>) em vez de media query */
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer base {
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-}
+/* Configurar dark mode por classe (.dark no <html>) em vez de media query */
 
 /* Suprimir transitions durante carregamento inicial (anti-FOUC) */
 .no-transition,
@@ -58,7 +56,3 @@ footer {
     z-index: 30 !important;
 }
 
-@media (max-width: 768px) {
-    .swiper-skills-prev { transform: translateY(-50%) translateX(0px) !important; }
-    .swiper-skills-next { transform: translateY(-50%) translateX(0px) !important; }
-}
