@@ -133,12 +133,8 @@ export default function App() {
           className="text-sm"
           style={{ color: '#4ade80' }}
           onClick={() => {
-            if (window.opener && !window.opener.closed) {
-              window.opener.focus()
-              window.close()
-            } else {
-              location.href = '/'
-            }
+            window.close()
+            setTimeout(() => { if (!window.closed) location.href = '/' }, 300)
           }}
         >
           ← Voltar para o Portfólio

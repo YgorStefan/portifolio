@@ -74,7 +74,7 @@ const timeFormatted = computed(() => {
   <div class="app">
     <header class="header">
       <div class="header-left">
-        <a href="javascript:void(0)" class="back-link" onclick="if(window.opener&&!window.opener.closed){window.opener.focus();window.close();}else{location.href='/';}">← Voltar para o Portfólio</a>
+        <a href="javascript:void(0)" class="back-link" onclick="window.close(); setTimeout(()=>{ if(!window.closed) location.href='/'; }, 300)">← Voltar para o Portfólio</a>
       </div>
       <div class="title-area">
         <h1>🃏 Jogo da Memória Tech</h1>

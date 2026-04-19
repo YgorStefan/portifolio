@@ -131,7 +131,7 @@
 <div class="app">
   <header class="header">
     <a href="javascript:void(0)" class="back-link"
-      on:click={() => { if (window.opener && !window.opener.closed) { window.opener.focus(); window.close() } else { location.href = '/' } }}>
+      on:click={() => { window.close(); setTimeout(() => { if (!window.closed) location.href = '/' }, 300) }}>
       ← Voltar para o Portfólio
     </a>
     <div class="title-area">
