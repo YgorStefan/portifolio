@@ -42,4 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleCanvas('#hero');
     new ParticleCanvas('#about');
     new ParticleCanvas('#projects');
+    new ParticleCanvas('#minijogos');
 });

@@ -38,6 +38,9 @@
                 <li><a href="#projects"
                         class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Projetos</a>
                 </li>
+                <li><a href="#minijogos"
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Minijogos</a>
+                </li>
                 <li><a href="#contact"
                         class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium">Contato</a>
                 </li>
@@ -116,6 +119,9 @@
                 </li>
                 <li><a href="#projects" @click="open = false"
                         class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Projetos</a>
+                </li>
+                <li><a href="#minijogos" @click="open = false"
+                        class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Minijogos</a>
                 </li>
                 <li><a href="#contact" @click="open = false"
                         class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium block py-2">Contato</a>

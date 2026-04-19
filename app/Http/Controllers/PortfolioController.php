@@ -42,6 +42,8 @@ class PortfolioController extends Controller
             ['name' => 'Bootstrap',   'icon' => 'devicon-bootstrap-plain colored'],
             ['name' => 'AWS',         'icon' => 'devicon-amazonwebservices-plain-wordmark colored'],
             // --- IA/ML (SVG inline no Blade — icon vazio intencional) ---
+            ['name' => 'Vite',        'icon' => 'devicon-vitejs-plain colored'],
+            ['name' => 'Svelte',      'icon' => 'devicon-svelte-plain colored'],
             ['name' => 'IA/ML',       'icon' => ''],
         ];
 
