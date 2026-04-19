@@ -107,6 +107,59 @@ Novos comandos a adicionar:
 
 ---
 
+## Melhorias de Qualidade Sênior
+
+### 7. memory-vue — Win overlay + stats persistentes
+
+**Problemas:**
+- Vitória exibe apenas um banner inline; todos os outros jogos têm overlay fullscreen.
+- Sem persistência de estatísticas (melhor tempo, partidas jogadas).
+- Sem animação celebratória.
+
+**Solução:**
+- Substituir `.win-banner` por overlay fullscreen (fixed, blur de fundo) consistente com os outros jogos.
+- Adicionar localStorage para persistir: melhor tempo, total de partidas, melhor número de tentativas.
+- Exibir stats no overlay de vitória e no header.
+
+**Arquivos afetados:**
+- `games/memory-vue/src/App.vue`
+- `games/memory-vue/src/style.css`
+
+---
+
+### 8. runner-vanilla — Spawn de obstáculos também frame-based
+
+**Problema:** `if (this.frameCount % this.spawnInterval === 0)` — o spawn é a cada N frames, não a cada N ms. Em 144Hz os obstáculos aparecem 2.4× mais frequentemente.
+
+**Solução:** Substituir por acumulador de tempo: `this.spawnAccumulator += delta`. Quando acumular `>= spawnIntervalMs` (ex: 1500ms), spawna obstáculo e reseta o acumulador.
+
+**Arquivos afetados:**
+- `games/runner-vanilla/src/GameLoop.js`
+
+---
+
+### 9. termo-react — GameOverlay revela palavra com cores corretas na derrota
+
+**Problema:** Na derrota, o overlay mostra todas as letras da palavra-alvo em verde. Isso é visualmente incorreto — não há como "acertar" no game over.
+
+**Solução:** No GameOverlay, quando `status === 'lost'`, mostrar cada letra com fundo neutro (cinza escuro) e um texto explicativo "A palavra era:". Reservar o verde só para vitória.
+
+**Arquivos afetados:**
+- `games/termo-react/src/components/GameOverlay.tsx`
+
+---
+
+### 10. typing-svelte — Indicador de velocidade no HUD
+
+**Problema:** A velocidade progressiva é invisível para o jogador — não há feedback de que o jogo está acelerando.
+
+**Solução:** Adicionar `⚡ {(fallSpeed / 0.4).toFixed(1)}×` no HUD ao lado do score, com cor mudando de verde → amarelo → vermelho conforme a velocidade aumenta.
+
+**Arquivos afetados:**
+- `games/typing-svelte/src/App.svelte`
+
+---
+
 ## Build e Deploy
 
 Após as correções, rebuildar os 3 jogos afetados e rodar o script de deploy:
