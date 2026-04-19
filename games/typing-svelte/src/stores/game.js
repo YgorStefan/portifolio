@@ -1,7 +1,7 @@
 import { writable, derived } from 'svelte/store'
 
 export const enemies  = writable([])
-export const lives    = writable(3)
+export const lives    = writable(5)
 export const score    = writable(0)
 export const typed    = writable('')
 export const gameOver = writable(false)

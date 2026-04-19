@@ -18,3 +18,12 @@ export const COMMANDS = [
   'npm audit',
   'git fetch',
 ]
+
+export function shuffleCommands() {
+  const arr = [...COMMANDS]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
