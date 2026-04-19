@@ -10,6 +10,8 @@ export class Player {
     this.gravity = 0.7
     this.jumpForce = -15
     this.isOnGround = true
+    this.frame = 0
+    this.frameTimer = 0
   }
 
   jump() {
@@ -27,14 +29,36 @@ export class Player {
       this.vy = 0
       this.isOnGround = true
     }
+    if (this.isOnGround) {
+      this.frameTimer++
+      if (this.frameTimer >= 8) { this.frame = (this.frame + 1) % 2; this.frameTimer = 0 }
+    }
   }
 
   draw(ctx) {
-    ctx.fillStyle = '#38bdf8'
-    ctx.fillRect(this.x, this.y, this.width, this.height)
-    ctx.fillStyle = '#0f172a'
-    ctx.fillRect(this.x + 7,  this.y + 10, 9, 9)
-    ctx.fillRect(this.x + 24, this.y + 10, 9, 9)
-    ctx.fillRect(this.x + 10, this.y + 30, 20, 4)
+    const { x, y, width: w, height: h } = this
+    // body
+    ctx.fillStyle = '#2d6a1f'
+    ctx.fillRect(x + 4, y + 14, w - 8, h - 14)
+    // head
+    ctx.fillRect(x + 8, y, w - 10, 18)
+    // eye white
+    ctx.fillStyle = '#fff'
+    ctx.fillRect(x + w - 10, y + 4, 8, 8)
+    // eye pupil
+    ctx.fillStyle = '#111'
+    ctx.fillRect(x + w - 8, y + 6, 4, 4)
+    // legs
+    ctx.fillStyle = '#3a8a28'
+    if (!this.isOnGround) {
+      ctx.fillRect(x + 8,  y + h - 12, 8, 16)
+      ctx.fillRect(x + 22, y + h - 12, 8, 16)
+    } else if (this.frame === 0) {
+      ctx.fillRect(x + 8,  y + h - 6,  8, 14)
+      ctx.fillRect(x + 22, y + h - 14, 8, 8)
+    } else {
+      ctx.fillRect(x + 8,  y + h - 14, 8, 8)
+      ctx.fillRect(x + 22, y + h - 6,  8, 14)
+    }
   }
 }

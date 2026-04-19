@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dino Bug Run</title>
+    <title>Fuga do Dino</title>
   </head>
   <body>
     <header class="game-header">
-      <a href="/" class="back-link">← Portfólio</a>
+      <a href="javascript:void(0)" class="back-link"
+        onclick="if(window.opener&&!window.opener.closed){window.opener.focus();window.close();}else{location.href='/';}">
+        ← Voltar para o Portfólio
+      </a>
       <div class="title-area">
-        <h1>🦖 Dino Bug Run</h1>
+        <h1>🦖 Fuga do Dino</h1>
         <div class="badges">
           <span class="badge">JavaScript</span>
           <span class="badge">Canvas</span>

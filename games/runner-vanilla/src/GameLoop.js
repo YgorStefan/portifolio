@@ -8,20 +8,21 @@ export class GameLoop {
     this.player = new Player(canvas)
     this.obstacles = []
     this.score = 0
-    this.speed = 5
+    this.speedMultiplier = 1.0
     this.frameCount = 0
     this.running = false
     this.isGameOver = false
     this.animId = null
     this.spawnInterval = 90
+    this.lastScore = parseInt(localStorage.getItem('dino_last_score') || '0')
   }
 
-  // I increase speed every 500 points so the game gets progressively harder without a sudden spike
+  get speed() { return this.speedMultiplier * 5 }
+
   _updateSpeed() {
-    this.speed = 5 + Math.floor(this.score / 500) * 0.5
+    this.speedMultiplier = 1.0 + Math.floor(this.score / 1500) * 0.5
   }
 
-  // I use AABB (axis-aligned bounding box) — check that neither rectangle's edge has passed the other on both axes
   _checkCollision(a, b) {
     return (
       a.x              < b.x + b.width  &&
@@ -48,6 +49,7 @@ export class GameLoop {
       if (this._checkCollision(this.player, obs)) {
         this.isGameOver = true
         this.running = false
+        localStorage.setItem('dino_last_score', String(this.score))
         return
       }
     }
@@ -56,31 +58,31 @@ export class GameLoop {
   _draw() {
     const { ctx, canvas } = this
 
-    ctx.fillStyle = '#0f172a'
+    ctx.fillStyle = '#1a1005'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-    ctx.fillStyle = '#334155'
+    ctx.fillStyle = '#3d2510'
     ctx.fillRect(0, canvas.height - 20, canvas.width, 20)
 
     this.player.draw(ctx)
     this.obstacles.forEach(o => o.draw(ctx))
 
-    ctx.fillStyle = '#f1f5f9'
+    ctx.fillStyle = '#fbbf24'
     ctx.font = 'bold 14px monospace'
     ctx.fillText(`Score: ${this.score}`, 16, 28)
-    ctx.fillText(`Vel: ${this.speed.toFixed(1)}x`, 16, 48)
+    ctx.fillText(`Vel: ${this.speedMultiplier.toFixed(1)}x`, 16, 48)
 
     if (this.isGameOver) {
-      ctx.fillStyle = 'rgba(0,0,0,0.75)'
+      ctx.fillStyle = 'rgba(0,0,0,0.78)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
       ctx.textAlign = 'center'
-      ctx.fillStyle = '#ef4444'
+      ctx.fillStyle = '#f59e0b'
       ctx.font = 'bold 28px monospace'
-      ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2 - 24)
+      ctx.fillText('Fim de Jogo', canvas.width / 2, canvas.height / 2 - 28)
       ctx.fillStyle = '#f1f5f9'
       ctx.font = '16px monospace'
-      ctx.fillText(`Score: ${this.score}`, canvas.width / 2, canvas.height / 2 + 12)
-      ctx.fillText('Espaço / Toque para reiniciar', canvas.width / 2, canvas.height / 2 + 40)
+      ctx.fillText(`Score: ${this.score} | Último: ${this.lastScore}`, canvas.width / 2, canvas.height / 2 + 8)
+      ctx.fillText('Espaço / Toque para reiniciar', canvas.width / 2, canvas.height / 2 + 36)
       ctx.textAlign = 'left'
     }
   }
@@ -92,13 +94,6 @@ export class GameLoop {
     this.animId = requestAnimationFrame(() => this._loop())
   }
 
-  start() {
-    this.running = true
-    this._loop()
-  }
-
-  stop() {
-    this.running = false
-    cancelAnimationFrame(this.animId)
-  }
+  start() { this.running = true; this._loop() }
+  stop() { this.running = false; cancelAnimationFrame(this.animId) }
 }
