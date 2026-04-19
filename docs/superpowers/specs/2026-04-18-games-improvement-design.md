@@ -76,7 +76,7 @@ Melhorias em 4 frentes para os minijogos do portfólio:
 ### Bugs corrigidos
 - **Palavras:** expandir lista para ~40 palavras tech de 5 letras em pt-BR
   - Exemplos: pilha, fila, vetor, cache, clone, linux, fetch, array, query, token, https, porta, dados, ciclo, frame, banco, chave, redes, nuvem, debug, merge, fluxo, build, teste, agile, troca, borda, saida, loops, senha, papel, campo, mutex, bloco, pacot, proto
-- **Bug "não troca ao vencer":** `resetGame()` avança para próxima palavra da lista (índice + 1) em vez de chamar `getDailyWord()` que retorna sempre a mesma
+- **Bug "não troca ao vencer ou perder":** `resetGame()` avança para próxima palavra da lista (índice + 1) em vez de chamar `getDailyWord()` que retorna sempre a mesma
 - **Palavra revelada:** mostrar a palavra-alvo no overlay de fim de jogo em ambos os casos (vitória e derrota)
 
 ### Overlay de fim de jogo (novo)
