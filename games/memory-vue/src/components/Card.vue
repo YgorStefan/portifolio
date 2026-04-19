@@ -53,13 +53,13 @@ function handleClick() {
   backface-visibility: hidden;
   border-radius: 12px;
   font-size: 2rem;
-  border: 2px solid #334155;
-  background: #1e293b;
+  border: 2px solid #2d1f5e;
+  background: #1a1230;
   user-select: none;
 }
 .card-back {
   transform: rotateY(180deg);
-  background: #0f172a;
+  background: #0d0a1a;
   gap: 6px;
 }
 .card.matched .card-front,
@@ -69,7 +69,7 @@ function handleClick() {
 }
 .label {
   font-size: 0.65rem;
-  color: #94a3b8;
+  color: #a78bfa;
 }
 .card-svg { display: flex; align-items: center; justify-content: center; }
 .card-svg svg { width: 48px; height: 48px; }
