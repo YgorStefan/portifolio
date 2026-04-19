@@ -1,22 +1,45 @@
 export const COMMANDS = [
+  // Git
   'git push',
-  'npm install',
   'git commit',
-  'npm run dev',
   'git status',
-  'npm run build',
   'git pull',
-  'npm start',
   'git clone',
   'git merge',
   'git stash',
-  'npm test',
   'git log',
-  'npm init',
   'git diff',
   'git reset',
-  'npm audit',
   'git fetch',
+  // npm
+  'npm install',
+  'npm run dev',
+  'npm run build',
+  'npm start',
+  'npm test',
+  'npm init',
+  'npm audit',
+  // Docker
+  'docker run',
+  'docker build',
+  'docker pull',
+  'docker ps',
+  // Python
+  'pip install',
+  'python -m venv',
+  // Rust / Cargo
+  'cargo build',
+  'cargo run',
+  'cargo test',
+  // Go
+  'go build',
+  'go test',
+  // Yarn
+  'yarn dev',
+  'yarn build',
+  'yarn add',
+  // Misc
+  'make build',
 ]
 
 export function shuffleCommands() {
