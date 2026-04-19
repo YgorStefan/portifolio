@@ -26,6 +26,6 @@ defineEmits(['flip'])
   margin: 0 auto;
 }
 @media (max-width: 480px) {
-  .board { gap: 8px; }
+  .board { gap: 8px; grid-template-columns: repeat(2, 1fr); }
 }
 </style>
