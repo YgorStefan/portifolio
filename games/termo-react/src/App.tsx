@@ -1,11 +1,19 @@
 import { useState, useEffect, useCallback } from 'react'
 import Grid from './components/Grid'
 import Keyboard from './components/Keyboard'
+import GameOverlay from './components/GameOverlay'
 import type { GuessRow, LetterState, Stats } from './types'
-import { getDailyWord, validateGuess, loadStats, saveStats } from './utils/gameLogic'
+import { validateGuess, loadStats, saveStats } from './utils/gameLogic'
+import { WORDS } from './utils/wordList'
 
 const MAX_ATTEMPTS = 6
 const WORD_LENGTH = 5
+
+function getInitialWordIndex(): number {
+  const start = new Date(new Date().getFullYear(), 0, 0)
+  const diff = +new Date() - +start
+  return Math.floor(diff / (1000 * 60 * 60 * 24))
+}
 
 function createEmptyRows(): GuessRow[] {
   return Array(MAX_ATTEMPTS).fill(null).map(() => ({
@@ -16,7 +24,8 @@ function createEmptyRows(): GuessRow[] {
 }
 
 export default function App() {
-  const [target, setTarget] = useState(getDailyWord)
+  const [wordIndex, setWordIndex] = useState(getInitialWordIndex)
+  const [target, setTarget] = useState(() => WORDS[getInitialWordIndex() % WORDS.length])
   const [rows, setRows] = useState<GuessRow[]>(createEmptyRows)
   const [currentRow, setCurrentRow] = useState(0)
   const [currentLetters, setCurrentLetters] = useState<string[]>([])
@@ -26,7 +35,9 @@ export default function App() {
   const [message, setMessage] = useState('')
 
   function resetGame() {
-    setTarget(getDailyWord())
+    const nextIdx = wordIndex + 1
+    setWordIndex(nextIdx)
+    setTarget(WORDS[nextIdx % WORDS.length])
     setRows(createEmptyRows())
     setCurrentRow(0)
     setCurrentLetters([])
@@ -84,13 +95,11 @@ export default function App() {
         setStats(newStats)
         saveStats(newStats)
         setStatus('won')
-        showMessage('🎉 Você acertou!')
       } else if (currentRow + 1 >= MAX_ATTEMPTS) {
         const newStats: Stats = { ...stats, losses: stats.losses + 1, streak: 0, lastPlayed: new Date().toDateString(), lastResult: 'loss' }
         setStats(newStats)
         saveStats(newStats)
         setStatus('lost')
-        showMessage(`A palavra era ${target}`)
       } else {
         setCurrentRow(r => r + 1)
       }
@@ -109,31 +118,50 @@ export default function App() {
   }, [handleKey])
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-      <header className="flex items-center justify-between px-6 py-4 bg-gray-800 border-b border-gray-700">
-        <a href="/" className="text-gray-400 hover:text-sky-400 text-sm">← Portfólio</a>
+    <div className="min-h-screen flex flex-col" style={{ background: '#071a0d', color: '#f1f5f9' }}>
+      {status !== 'playing' && (
+        <GameOverlay
+          status={status}
+          target={target}
+          attempts={currentRow + (status === 'won' ? 1 : MAX_ATTEMPTS)}
+          onNext={resetGame}
+        />
+      )}
+      <header className="flex items-center justify-between px-6 py-4" style={{ background: '#0f2a18', borderBottom: '1px solid #14532d' }}>
+        <a
+          href="javascript:void(0)"
+          className="text-sm"
+          style={{ color: '#4ade80' }}
+          onClick={() => {
+            if (window.opener && !window.opener.closed) {
+              window.opener.focus()
+              window.close()
+            } else {
+              location.href = '/'
+            }
+          }}
+        >
+          ← Voltar para o Portfólio
+        </a>
         <div className="flex flex-col items-center gap-2">
-          <h1 className="text-xl font-bold">🟩 Techdle</h1>
+          <h1 className="text-xl font-bold">🟩 Wordle Tech</h1>
           <div className="flex gap-2">
             {['React', 'TypeScript', 'Tailwind'].map(b => (
-              <span key={b} className="text-xs font-semibold px-2 py-0.5 rounded-full border border-sky-400/40 bg-sky-400/10 text-sky-400">{b}</span>
+              <span key={b} className="text-xs font-semibold px-2 py-0.5 rounded-full"
+                style={{ border: '1px solid rgba(34,197,94,0.4)', background: 'rgba(34,197,94,0.1)', color: '#4ade80' }}>{b}</span>
             ))}
           </div>
         </div>
-        <div className="text-sm text-gray-400">🏆 {stats.wins}V / {stats.losses}D</div>
+        <div className="flex gap-2 text-sm">
+          <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e', border: '1px solid #22c55e' }}>✓ {stats.wins} vitórias</span>
+          <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444', border: '1px solid #ef4444' }}>✗ {stats.losses} derrotas</span>
+          {stats.streak > 0 && <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(234,179,8,0.15)', color: '#eab308', border: '1px solid #eab308' }}>🔥 {stats.streak} seguidas</span>}
+        </div>
       </header>
 
       <main className="flex flex-col items-center justify-center flex-1 px-4 py-6">
         {message && (
-          <div className="mb-4 px-4 py-2 rounded bg-gray-700 text-white text-sm font-semibold">{message}</div>
-        )}
-        {status !== 'playing' && (
-          <button
-            onClick={resetGame}
-            className="mb-4 px-6 py-2 rounded bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm"
-          >
-            Jogar novamente
-          </button>
+          <div className="mb-4 px-4 py-2 rounded text-sm font-semibold" style={{ background: '#0f2a18', color: '#f1f5f9' }}>{message}</div>
         )}
         <Grid rows={rows} currentRow={currentRow} currentLetters={currentLetters} />
         <Keyboard letterStates={letterStates} onKey={handleKey} />
