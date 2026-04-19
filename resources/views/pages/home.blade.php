@@ -321,7 +321,7 @@
                         Jogo da memória com logos de tecnologias. Animação de flip em CSS puro, cronômetro e contador de tentativas.
                     </p>
                     <div class="mt-4 flex gap-2">
-                        <a href="/games/memory-vue/" target="game-window" rel="noopener noreferrer"
+                        <a href="/games/memory-vue/" target="game-window"
                            class="flex-1 inline-flex items-center justify-center gap-1 bg-accent hover:bg-accent/90
                                   text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                             ▶ Jogar
@@ -397,7 +397,7 @@
                         Clone do Wordle com palavras do universo tech. Teclado virtual, validação de letras e histórico salvo no LocalStorage.
                     </p>
                     <div class="mt-4 flex gap-2">
-                        <a href="/games/termo-react/" target="game-window" rel="noopener noreferrer"
+                        <a href="/games/termo-react/" target="game-window"
                            class="flex-1 inline-flex items-center justify-center gap-1 bg-accent hover:bg-accent/90
                                   text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                             ▶ Jogar
@@ -455,7 +455,7 @@
                         Endless runner em Canvas puro com OOP, detecção de colisão AABB e velocidade progressiva. Pule com Espaço ou toque.
                     </p>
                     <div class="mt-4 flex gap-2">
-                        <a href="/games/runner-vanilla/" target="game-window" rel="noopener noreferrer"
+                        <a href="/games/runner-vanilla/" target="game-window"
                            class="flex-1 inline-flex items-center justify-center gap-1 bg-accent hover:bg-accent/90
                                   text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                             ▶ Jogar
@@ -513,7 +513,7 @@
                         Aliens caem com comandos de terminal. Digite o comando correto para destruí-los antes que cheguem ao servidor.
                     </p>
                     <div class="mt-4 flex gap-2">
-                        <a href="/games/typing-svelte/" target="game-window" rel="noopener noreferrer"
+                        <a href="/games/typing-svelte/" target="game-window"
                            class="flex-1 inline-flex items-center justify-center gap-1 bg-accent hover:bg-accent/90
                                   text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                             ▶ Jogar
