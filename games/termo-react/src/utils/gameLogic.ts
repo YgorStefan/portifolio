@@ -35,8 +35,21 @@ export function validateGuess(guess: string, target: string): LetterState[] {
   return result
 }
 
+const STORAGE_KEY = 'techdle_stats'
+
 export function loadStats(): Stats {
-  return { wins: 0, losses: 0, streak: 0, lastPlayed: '', lastResult: null }
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    return raw ? JSON.parse(raw) : { wins: 0, losses: 0, streak: 0, lastPlayed: '', lastResult: null }
+  } catch {
+    return { wins: 0, losses: 0, streak: 0, lastPlayed: '', lastResult: null }
+  }
 }
 
-export function saveStats(_stats: object) {}
+export function saveStats(stats: object) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(stats))
+}
+
+export function resetStats() {
+  localStorage.removeItem(STORAGE_KEY)
+}
