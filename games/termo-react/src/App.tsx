@@ -151,20 +151,22 @@ export default function App() {
         <div className="w-24" />
       </header>
 
-      <main className="flex flex-col items-center justify-center flex-1 px-4 py-6">
-        {message && (
-          <div className="mb-4 px-4 py-2 rounded text-sm font-semibold" style={{ background: '#0f2a18', color: '#f1f5f9' }}>{message}</div>
-        )}
-        <Grid rows={rows} currentRow={currentRow} currentLetters={currentLetters} />
-        <Keyboard letterStates={letterStates} onKey={handleKey} />
+      <main className="flex flex-1 items-center justify-center gap-8 px-4 py-6">
+        <div className="flex flex-col items-center">
+          {message && (
+            <div className="mb-4 px-4 py-2 rounded text-sm font-semibold" style={{ background: '#0f2a18', color: '#f1f5f9' }}>{message}</div>
+          )}
+          <Grid rows={rows} currentRow={currentRow} currentLetters={currentLetters} />
+          <Keyboard letterStates={letterStates} onKey={handleKey} />
+        </div>
 
-        <div className="flex items-center gap-3 mt-4 text-sm">
-          <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e', border: '1px solid #22c55e' }}>✓ {stats.wins} vitórias</span>
-          <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444', border: '1px solid #ef4444' }}>✗ {stats.losses} derrotas</span>
-          {stats.streak > 0 && <span className="px-2 py-0.5 rounded font-semibold" style={{ background: 'rgba(234,179,8,0.15)', color: '#eab308', border: '1px solid #eab308' }}>🔥 {stats.streak} seguidas</span>}
+        <div className="flex flex-col gap-3 text-sm" style={{ minWidth: '110px' }}>
+          <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e', border: '1px solid #22c55e' }}>✓ {stats.wins}<br/><span className="text-xs font-normal opacity-75">vitórias</span></span>
+          <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444', border: '1px solid #ef4444' }}>✗ {stats.losses}<br/><span className="text-xs font-normal opacity-75">derrotas</span></span>
+          {stats.streak > 0 && <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(234,179,8,0.15)', color: '#eab308', border: '1px solid #eab308' }}>🔥 {stats.streak}<br/><span className="text-xs font-normal opacity-75">seguidas</span></span>}
           <button
             onClick={() => { resetStats(); setStats({ wins: 0, losses: 0, streak: 0, lastPlayed: '', lastResult: null }) }}
-            className="px-2 py-0.5 rounded font-semibold text-xs"
+            className="px-3 py-1.5 rounded font-semibold text-xs"
             style={{ background: 'rgba(107,114,128,0.15)', color: '#9ca3af', border: '1px solid #4b5563' }}
           >
             Resetar
