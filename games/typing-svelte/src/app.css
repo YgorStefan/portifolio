@@ -8,6 +8,7 @@ body { background: #01101a; color: #f1f5f9; font-family: system-ui, sans-serif; 
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 2rem;
+  min-height: 5.5rem;
   background: #021828;
   border-bottom: 1px solid #0a3a50;
   z-index: 10;

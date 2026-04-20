@@ -6,6 +6,7 @@ body { background: #1a1005; color: #f1f5f9; font-family: system-ui, sans-serif; 
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  min-height: 5.5rem;
   background: #2a1a08;
   border-bottom: 1px solid #3d2510;
   position: relative;

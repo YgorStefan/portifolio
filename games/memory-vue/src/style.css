@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  min-height: 5.5rem;
   background: #1a1230;
   border-bottom: 1px solid #2d1f5e;
   position: relative;
