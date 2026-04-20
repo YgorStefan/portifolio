@@ -140,7 +140,26 @@ export default function App() {
           ← Voltar para o Portfólio
         </a>
         <div className="flex flex-col items-center gap-2" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', pointerEvents: 'none' }}>
-          <h1 className="text-xl font-bold">🟩 Wordle Tech</h1>
+          <div className="flex items-center gap-2">
+            <svg width="32" height="23" viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0"  y="0"  width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="12" y="0"  width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="24" y="0"  width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="36" y="0"  width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="48" y="0"  width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="0"  y="14" width="10" height="10" rx="1.5" fill="#eab308"/>
+              <rect x="12" y="14" width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="24" y="14" width="10" height="10" rx="1.5" fill="#eab308"/>
+              <rect x="36" y="14" width="10" height="10" rx="1.5" fill="#6b7280"/>
+              <rect x="48" y="14" width="10" height="10" rx="1.5" fill="#22c55e"/>
+              <rect x="0"  y="28" width="10" height="10" rx="1.5" fill="#22c55e"/>
+              <rect x="12" y="28" width="10" height="10" rx="1.5" fill="#22c55e"/>
+              <rect x="24" y="28" width="10" height="10" rx="1.5" fill="#22c55e"/>
+              <rect x="36" y="28" width="10" height="10" rx="1.5" fill="#22c55e"/>
+              <rect x="48" y="28" width="10" height="10" rx="1.5" fill="#22c55e"/>
+            </svg>
+            <h1 className="text-xl font-bold">Wordle Tech</h1>
+          </div>
           <div className="flex gap-2">
             {['React', 'TypeScript', 'Tailwind'].map(b => (
               <span key={b} className="text-xs font-semibold px-2 py-0.5 rounded-full"
@@ -151,7 +170,7 @@ export default function App() {
         <div />
       </header>
 
-      <main className="flex flex-1 items-center justify-center gap-8 px-4 py-6">
+      <main className="flex flex-1 items-center justify-center gap-4 px-4 py-6">
         <div className="flex flex-col items-center">
           {message && (
             <div className="mb-4 px-4 py-2 rounded text-sm font-semibold" style={{ background: '#0f2a18', color: '#f1f5f9' }}>{message}</div>
@@ -160,7 +179,7 @@ export default function App() {
           <Keyboard letterStates={letterStates} onKey={handleKey} />
         </div>
 
-        <div className="flex flex-col gap-3 text-sm" style={{ minWidth: '110px' }}>
+        <div className="flex flex-col gap-3 text-sm self-start" style={{ minWidth: '110px', paddingTop: '0.5rem' }}>
           <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(34,197,94,0.15)', color: '#22c55e', border: '1px solid #22c55e' }}>✓ {stats.wins}<br/><span className="text-xs font-normal opacity-75">vitórias</span></span>
           <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(239,68,68,0.15)', color: '#ef4444', border: '1px solid #ef4444' }}>✗ {stats.losses}<br/><span className="text-xs font-normal opacity-75">derrotas</span></span>
           {stats.streak > 0 && <span className="px-3 py-1.5 rounded font-semibold text-center" style={{ background: 'rgba(234,179,8,0.15)', color: '#eab308', border: '1px solid #eab308' }}>🔥 {stats.streak}<br/><span className="text-xs font-normal opacity-75">seguidas</span></span>}
