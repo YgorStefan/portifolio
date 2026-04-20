@@ -127,7 +127,7 @@ export default function App() {
           onNext={resetGame}
         />
       )}
-      <header className="flex items-center justify-between px-6 py-4" style={{ background: '#0f2a18', borderBottom: '1px solid #14532d' }}>
+      <header className="flex items-center justify-between px-6 py-4" style={{ background: '#0f2a18', borderBottom: '1px solid #14532d', position: 'relative' }}>
         <a
           href="javascript:void(0)"
           className="text-sm"
@@ -139,7 +139,7 @@ export default function App() {
         >
           ← Voltar para o Portfólio
         </a>
-        <div className="flex flex-col items-center gap-2">
+        <div className="flex flex-col items-center gap-2" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', pointerEvents: 'none' }}>
           <h1 className="text-xl font-bold">🟩 Wordle Tech</h1>
           <div className="flex gap-2">
             {['React', 'TypeScript', 'Tailwind'].map(b => (
@@ -148,7 +148,7 @@ export default function App() {
             ))}
           </div>
         </div>
-        <div className="w-24" />
+        <div />
       </header>
 
       <main className="flex flex-1 items-center justify-center gap-8 px-4 py-6">

@@ -13,7 +13,16 @@ body { background: #01101a; color: #f1f5f9; font-family: system-ui, sans-serif; 
   z-index: 10;
   position: relative;
 }
-.title-area { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.title-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
 .back-link { color: #67e8f9; text-decoration: none; font-size: 0.85rem; }
 .back-link:hover { color: #06b6d4; }
 h1 { font-size: 1.3rem; font-weight: 700; }

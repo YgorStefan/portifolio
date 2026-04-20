@@ -8,8 +8,18 @@ body { background: #1a1005; color: #f1f5f9; font-family: system-ui, sans-serif; 
   padding: 1rem 2rem;
   background: #2a1a08;
   border-bottom: 1px solid #3d2510;
+  position: relative;
 }
-.title-area { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.title-area {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
 .back-link { color: #fbbf24; text-decoration: none; font-size: 0.9rem; }
 .back-link:hover { color: #f59e0b; }
 h1 { font-size: 1.5rem; font-weight: 700; }
