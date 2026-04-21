@@ -44,6 +44,21 @@
     ]
   },
   {
+    "title": "EduFlow Pro",
+    "description": "Sistema de retenção e operação de alunos do checkout ao portal, com detecção automática de churn.",
+    "image": "edu.jpg",
+    "url": "https://eduflow-gilt-five.vercel.app/",
+    "repo": "https://github.com/YgorStefan/eduflow",
+    "tags": [
+      "TypeScript",
+      "Node.js",
+      "Python",
+      "Next.js",
+      "PostgreSQL",
+      "NoSQL"
+    ]
+  },
+  {
     "title": "Portfólio",
     "description": "Site desse portfólio desenvolvido com Laravel 12, Tailwind CSS v4 e Alpine.js. Dark theme com animações AOS e carrossel Swiper para exibição das minhas habilidades.",
     "image": "portfolio.jpg",

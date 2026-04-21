@@ -44,6 +44,8 @@ class PortfolioController extends Controller
             // --- IA/ML (SVG inline no Blade — icon vazio intencional) ---
             ['name' => 'Vite',        'icon' => 'devicon-vitejs-plain colored'],
             ['name' => 'Svelte',      'icon' => 'devicon-svelte-plain colored'],
+            ['name' => 'Next.js',     'icon' => 'devicon-nextjs-plain'],
+            ['name' => 'NoSQL',       'icon' => 'devicon-mongodb-plain colored'],
             ['name' => 'IA/ML',       'icon' => ''],
         ];
 
