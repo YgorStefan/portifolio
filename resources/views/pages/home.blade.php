@@ -148,7 +148,7 @@
             </div>
 
             {{-- Grid de skills --}}
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 max-w-5xl mx-auto" data-aos="fade-up" data-aos-delay="200">
 
                 {{-- Cards reais --}}
                 <template x-for="(skill, idx) in currentPageSkills" :key="skill.name">
@@ -227,8 +227,8 @@
             </div>
 
             {{-- Barra de progresso (só visível quando há mais de 1 página) --}}
-            <div class="mt-3.5 h-[3px] rounded-full overflow-hidden max-w-xs mx-auto transition-colors duration-300"
-                 :class="isPaginated ? 'bg-gray-200 dark:bg-gray-800' : 'bg-transparent'">
+            <div x-show="isPaginated"
+                 class="mt-3.5 h-[3px] rounded-full overflow-hidden max-w-xs mx-auto bg-gray-200 dark:bg-gray-800">
                 <div x-ref="progressBar"
                      class="h-full rounded-full"
                      style="background: linear-gradient(90deg, #312e81, #3b82f6, #93c5fd); width: 0%;">
