@@ -56,3 +56,27 @@ footer {
     z-index: 30 !important;
 }
 
+/* ── Skill cards — animação de entrada ── */
+.skill-card {
+    opacity: 0;
+    translate: 0 14px;
+    scale: 0.95;
+    transition:
+        opacity 0.3s ease,
+        translate 0.3s ease,
+        scale 0.3s ease,
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+.skill-card--visible {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+}
+
+.skill-card--visible:hover {
+    translate: 0 -4px;
+    scale: 1.02;
+}
+
