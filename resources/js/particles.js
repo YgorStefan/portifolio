@@ -14,8 +14,8 @@ const DOT_RADIUS             = 2;    // px — raio do dot (D — tamanho)
 function getColor() {
   // D-03, D-04, D-05: detectar .dark em documentElement
   return document.documentElement.classList.contains('dark')
-    ? 'rgba(255, 255, 255, 0.22)'   // dark mode — branco ~20-25% opacidade
-    : 'rgba(100, 116, 139, 0.30)';  // light mode — #64748b ~30% opacidade
+    ? 'rgba(255, 255, 255, 0.38)'   // dark mode — branco ~38% opacidade
+    : 'rgba(148, 163, 184, 0.45)';  // light mode — slate-300 ~45% opacidade
 }
 
 class Particle {
