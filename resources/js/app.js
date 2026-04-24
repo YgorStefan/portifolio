@@ -14,7 +14,7 @@ Alpine.data('skillsGrid', (skills) => ({
     perPage: 8,
     autoMs: 3500,
     timer: null,
-    cardsVisible: false,
+    cardsVisible: true,
 
     get filtered() {
         return this.cat === 'all'
@@ -41,7 +41,6 @@ Alpine.data('skillsGrid', (skills) => ({
     },
 
     init() {
-        this.showCards();
         this.scheduleAuto();
     },
 
