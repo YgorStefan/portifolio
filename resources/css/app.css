@@ -64,6 +64,7 @@ footer {
 }
 
 .skill-card--visible:hover {
+    transition-delay: 0ms !important;
     translate: 0 -4px;
     scale: 1.02;
     border-color: rgba(59, 130, 246, 0.5);
