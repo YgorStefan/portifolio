@@ -227,7 +227,7 @@
             </div>
 
             {{-- Barra de progresso (só visível quando há mais de 1 página) --}}
-            <div x-show="isPaginated"
+            <div :class="isPaginated ? 'visible' : 'invisible'"
                  class="mt-3.5 h-[3px] rounded-full overflow-hidden max-w-xs mx-auto bg-gray-200 dark:bg-gray-800">
                 <div x-ref="progressBar"
                      class="h-full rounded-full"
