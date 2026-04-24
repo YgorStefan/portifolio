@@ -1,9 +1,5 @@
 import Alpine from 'alpinejs';
 import intersect from '@alpinejs/intersect';
-import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ParticleCanvas } from './particles.js';
