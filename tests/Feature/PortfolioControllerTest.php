@@ -55,6 +55,15 @@ class PortfolioControllerTest extends TestCase
         $this->assertStringStartsWith('<svg', $iaml['svg']);
     }
 
+    public function test_response_has_csp_header(): void
+    {
+        $response = $this->get('/');
+        $response->assertHeader('Content-Security-Policy');
+        $csp = $response->headers->get('Content-Security-Policy');
+        $this->assertStringContainsString("default-src 'self'", $csp);
+        $this->assertStringContainsString('https://cdn.jsdelivr.net', $csp);
+    }
+
     public function test_skills_fallback_to_empty_array_when_json_missing(): void
     {
         // Renomear temporariamente o arquivo para simular ausência
