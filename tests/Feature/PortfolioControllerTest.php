@@ -55,6 +55,24 @@ class PortfolioControllerTest extends TestCase
         $this->assertStringStartsWith('<svg', $iaml['svg']);
     }
 
+    public function test_skills_fallback_to_empty_array_when_json_missing(): void
+    {
+        // Renomear temporariamente o arquivo para simular ausência
+        $path = base_path('data/skills.json');
+        $temp = $path . '.bak';
+        rename($path, $temp);
+
+        try {
+            $response = $this->get('/');
+            $response->assertStatus(200);
+            $skills = $response->viewData('skills');
+            $this->assertIsArray($skills);
+            $this->assertEmpty($skills);
+        } finally {
+            rename($temp, $path);
+        }
+    }
+
     private function getSkills(): array
     {
         return $this->get('/')->viewData('skills');
