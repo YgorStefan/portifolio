@@ -62,6 +62,8 @@ class PortfolioControllerTest extends TestCase
         $csp = $response->headers->get('Content-Security-Policy');
         $this->assertStringContainsString("default-src 'self'", $csp);
         $this->assertStringContainsString('https://cdn.jsdelivr.net', $csp);
+        $this->assertStringContainsString('https://fonts.googleapis.com', $csp);
+        $this->assertStringContainsString('https://api-gateway.umami.dev', $csp);
     }
 
     public function test_skills_fallback_to_empty_array_when_json_missing(): void

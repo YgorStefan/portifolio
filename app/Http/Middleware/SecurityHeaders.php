@@ -19,10 +19,10 @@ class SecurityHeaders
         $response->headers->set('Content-Security-Policy',
             "default-src 'self'; " .
             "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cloud.umami.is; " .
-            "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; " .
-            "font-src 'self' data: https://cdn.jsdelivr.net; " .
+            "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; " .
+            "font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com; " .
             "img-src 'self' data:; " .
-            "connect-src 'self' https://cloud.umami.is;"
+            "connect-src 'self' https://cloud.umami.is https://api-gateway.umami.dev;"
         );
 
         return $response;
