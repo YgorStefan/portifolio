@@ -142,6 +142,19 @@ export class ParticleCanvas {
     this._mouseY = -9999;
   }
 
+  pause() {
+    if (this._rafId) {
+      cancelAnimationFrame(this._rafId);
+      this._rafId = null;
+    }
+  }
+
+  resume() {
+    if (!this._rafId) {
+      this._loop();
+    }
+  }
+
   _loop() {
     this._rafId = requestAnimationFrame(() => this._loop());
 

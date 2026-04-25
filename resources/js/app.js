@@ -97,6 +97,14 @@ Alpine.data('skillsGrid', (skills) => ({
 
 Alpine.start();
 
+function watchParticles(canvas, selector) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    new IntersectionObserver((entries) => {
+        entries[0].isIntersecting ? canvas.resume() : canvas.pause();
+    }, { threshold: 0 }).observe(el);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 700,
@@ -106,8 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Partículas interativas — D-11: instanciado 3x a partir de módulo único
-    new ParticleCanvas('#hero');
-    new ParticleCanvas('#about');
-    new ParticleCanvas('#projects');
-    new ParticleCanvas('#minijogos');
+    const heroParticles      = new ParticleCanvas('#hero');
+    const aboutParticles     = new ParticleCanvas('#about');
+    const projectParticles   = new ParticleCanvas('#projects');
+    const minijogosParticles = new ParticleCanvas('#minijogos');
+
+    watchParticles(heroParticles,      '#hero');
+    watchParticles(aboutParticles,     '#about');
+    watchParticles(projectParticles,   '#projects');
+    watchParticles(minijogosParticles, '#minijogos');
 });
