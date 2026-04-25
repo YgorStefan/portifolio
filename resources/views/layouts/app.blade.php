@@ -40,7 +40,7 @@
     @endproduction
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white antialiased transition-colors duration-150"
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white antialiased transition-colors duration-150 overflow-x-hidden"
     x-data>
     @include('partials.nav')
     <main>

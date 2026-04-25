@@ -17,13 +17,13 @@
                 class="min-w-0 font-bold text-gray-900 dark:text-white text-lg tracking-tight hover:text-accent transition-colors inline-flex items-center"
                 style="white-space: nowrap;">
                 Y<span class="inline-block overflow-hidden"
-                    style="transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
+                    style="max-width: 0; opacity: 0; transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
                     :style="{ maxWidth: expanded ? '3.5rem' : '0', opacity: expanded ? '1' : '0' }">gor&nbsp;</span>S<span
                     class="inline-block overflow-hidden"
-                    style="transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
+                    style="max-width: 0; opacity: 0; transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
                     :style="{ maxWidth: expanded ? '12rem' : '0', opacity: expanded ? '1' : '0' }">tefankowski&nbsp;da&nbsp;</span>S<span
                     class="inline-block overflow-hidden"
-                    style="transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
+                    style="max-width: 0; opacity: 0; transition: max-width 300ms ease-in-out, opacity 300ms ease-in-out; white-space: nowrap; vertical-align: baseline;"
                     :style="{ maxWidth: expanded ? '3.5rem' : '0', opacity: expanded ? '1' : '0' }">ilva</span>
             </a>
 
