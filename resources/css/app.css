@@ -34,7 +34,6 @@
 
 /* Transition suave de 150ms para troca de tema */
 html {
-    overflow-x: clip; /* clip não cria BFC, não afeta position:fixed — ao contrário de hidden */
     transition: background-color 150ms ease, color 150ms ease;
 }
 

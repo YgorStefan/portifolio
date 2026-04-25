@@ -1,4 +1,4 @@
-<section id="contact" class="py-24 bg-bg-card overflow-x-hidden">
+<section id="contact" class="py-24 bg-bg-card">
     <div class="container mx-auto px-6">
 
         {{-- Section heading --}}
@@ -13,7 +13,7 @@
         <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             {{-- Formulário de contato --}}
-            <div data-aos="fade-right">
+            <div data-aos="fade-up">
                 <form action="{{ route('contact.send') }}"
                       method="POST"
                       class="space-y-6"
@@ -123,7 +123,7 @@
             </div>
 
             {{-- Links sociais --}}
-            <div class="space-y-8" data-aos="fade-left">
+            <div class="space-y-8" data-aos="fade-up" data-aos-delay="100">
 
                 <div>
                     <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Onde me encontrar:</h3>
