@@ -71,5 +71,18 @@
       "Alpine.js",
       "JavaScript"
     ]
+  },
+  {
+    "title": "CV & Doc Translator",
+    "description": "Ferramenta gratuita para traduzir currículos Word (.docx) para o inglês preservando a formatação original, com exportação para PDF direto pelo navegador.",
+    "image": "portfolio.jpg",
+    "url": "/cv-translator",
+    "repo": "https://github.com/YgorStefan/portifolio",
+    "tags": [
+      "JavaScript",
+      "Tailwind CSS",
+      "JSZip",
+      "OOXML"
+    ]
   }
 ]
