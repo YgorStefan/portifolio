@@ -187,3 +187,44 @@ async function processDocx(file) {
         mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     });
 }
+
+async function exportToPDF(docxBlob) {
+    const styleContainer = document.createElement('div');
+    docxRenderContainer.innerHTML = '';
+
+    try {
+        await docx.renderAsync(docxBlob, docxRenderContainer, styleContainer);
+    } catch (err) {
+        alert('Erro ao renderizar o documento para PDF: ' + err.message);
+        return;
+    }
+
+    const renderedHTML   = docxRenderContainer.innerHTML;
+    const renderedStyles = styleContainer.innerHTML;
+
+    const iframe = document.createElement('iframe');
+    iframe.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:9999;background:white;';
+    document.body.appendChild(iframe);
+
+    const iframeDoc = iframe.contentDocument;
+    iframeDoc.open();
+    iframeDoc.write(`<!DOCTYPE html>
+<html>
+<head>
+${renderedStyles}
+<style>
+  body { margin: 0; padding: 20px; background: white; }
+  @media print { body { margin: 0; padding: 0; } }
+</style>
+</head>
+<body>${renderedHTML}</body>
+</html>`);
+    iframeDoc.close();
+
+    setTimeout(() => {
+        iframe.contentWindow.print();
+        setTimeout(() => {
+            if (document.body.contains(iframe)) document.body.removeChild(iframe);
+        }, 1000);
+    }, 300);
+}
