@@ -151,3 +151,39 @@ async function translateConcurrent(texts, onProgress) {
     }
     return results;
 }
+
+async function processDocx(file) {
+    const zip = await JSZip.loadAsync(file);
+
+    const xmlFilePaths = Object.keys(zip.files).filter(name =>
+        name === 'word/document.xml' ||
+        /^word\/(header|footer)\d*\.xml$/.test(name)
+    );
+
+    updateProgress(10, 'Extraindo conteúdo...');
+
+    for (const filePath of xmlFilePaths) {
+        const xmlStr = await zip.files[filePath].async('string');
+        const xmlDoc = new DOMParser().parseFromString(xmlStr, 'application/xml');
+
+        const paragraphs = collectParagraphs(xmlDoc);
+        if (!paragraphs.length) continue;
+
+        const texts = paragraphs.map(p => p.fullText);
+        const translated = await translateConcurrent(texts, (done, total) => {
+            const pct = 15 + Math.floor((done / total) * 70);
+            updateProgress(pct, `Traduzindo parágrafo ${done} de ${total}...`);
+        });
+
+        paragraphs.forEach((para, i) => redistributeText(para, translated[i]));
+
+        zip.file(filePath, new XMLSerializer().serializeToString(xmlDoc));
+    }
+
+    updateProgress(90, 'Gerando arquivo...');
+
+    return zip.generateAsync({
+        type: 'blob',
+        mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    });
+}
