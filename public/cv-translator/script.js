@@ -1,5 +1,26 @@
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
+function collectParagraphs(xmlDoc) {
+    const paras = xmlDoc.getElementsByTagNameNS(W_NS, 'p');
+    const result = [];
+    for (const para of paras) {
+        const tNodes = [...para.getElementsByTagNameNS(W_NS, 't')];
+        const fullText = tNodes.map(n => n.textContent).join('');
+        if (fullText.trim()) result.push({ fullText, tNodes });
+    }
+    return result;
+}
+
+function redistributeText({ tNodes }, translatedText) {
+    if (!tNodes.length) return;
+    const first = tNodes[0];
+    if (/^\s|\s$/.test(translatedText)) {
+        first.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
+    }
+    first.textContent = translatedText;
+    for (let i = 1; i < tNodes.length; i++) tNodes[i].textContent = '';
+}
+
 const dropzone         = document.getElementById('dropzone');
 const fileInput        = document.getElementById('fileInput');
 const statusArea       = document.getElementById('statusArea');
