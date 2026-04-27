@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Doc Translator | Tradutor Gratuito para Inglês</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- JSZip: unzip/rezip .docx files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- docx-preview: render .docx to HTML for PDF export -->
+    <script src="https://unpkg.com/docx-preview@0.1.22/dist/docx-preview.min.js"></script>
+</head>
+
+<body
+    class="bg-gray-900 text-white font-inter min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <!-- Background elements -->
+    <div
+        class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-50 animate-blob">
+    </div>
+    <div
+        class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-50 animate-blob animation-delay-2000">
+    </div>
+    <div
+        class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-50 animate-blob animation-delay-4000">
+    </div>
+
+    <div
+        class="relative z-10 w-full max-w-3xl bg-gray-800/60 backdrop-blur-xl rounded-3xl shadow-2xl border border-gray-700/50 p-8 md:p-12">
+        <div class="text-center mb-10">
+            <h1
+                class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-500 mb-4">
+                CV & Doc Translator
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Traduza seus currículos ou documentos (PDF/Word) para o <strong class="text-gray-200">Inglês</strong> de
+                forma 100% gratuita.
+            </p>
+        </div>
+
+        <div id="dropzone"
+            class="border-2 border-dashed border-gray-600 rounded-2xl p-10 flex flex-col items-center justify-center cursor-pointer hover:border-blue-500 hover:bg-gray-700/30 transition-all duration-300 group">
+            <svg class="w-16 h-16 text-gray-500 group-hover:text-blue-400 transition-colors mb-4" fill="none"
+                stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+            </svg>
+            <p class="text-xl font-semibold text-gray-300 mb-2">Clique ou arraste seu arquivo aqui</p>
+            <p class="text-sm text-gray-500">Suporta apenas <strong class="text-gray-400">.DOCX</strong></p>
+            <input type="file" id="fileInput" class="hidden" accept=".docx" />
+        </div>
+
+        <div id="statusArea" class="mt-8 hidden">
+            <div class="flex items-center justify-between mb-2">
+                <span id="statusText" class="text-sm font-medium text-blue-400">Processando...</span>
+                <span id="statusPercent" class="text-sm font-medium text-gray-400">0%</span>
+            </div>
+            <div class="w-full bg-gray-700 rounded-full h-2.5 overflow-hidden">
+                <div id="progressBar"
+                    class="bg-linear-to-r from-blue-500 to-purple-600 h-2.5 rounded-full transition-all duration-300"
+                    style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div id="resultArea" class="mt-8 hidden flex-col items-center opacity-0 transition-opacity duration-500">
+            <div
+                class="bg-green-500/10 border border-green-500/30 rounded-xl p-4 text-center w-full mb-6 text-green-400 flex items-center justify-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Tradução concluída com sucesso!
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+                <button id="downloadWordBtn"
+                    class="bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Baixar como Word (.docx)
+                </button>
+                <button id="downloadPdfBtn"
+                    class="border border-blue-500 text-blue-400 hover:bg-blue-500/10 font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                    </svg>
+                    Exportar como PDF
+                </button>
+            </div>
+            <button id="resetBtn" class="mt-4 text-gray-500 hover:text-gray-300 text-sm underline transition-colors">
+                Traduzir outro arquivo
+            </button>
+        </div>
+
+        <!-- Container oculto para docx-preview (PDF export) -->
+        <div id="docxRenderContainer" style="display:none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
