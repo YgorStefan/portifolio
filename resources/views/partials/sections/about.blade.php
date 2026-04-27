@@ -30,8 +30,9 @@
                 </p>
 
                 {{-- Download do CV --}}
-                <a href="{{ asset('files/Currículo Ygor Stefankowski da Silva.pdf') }}"
-                   download="Curriculo-Ygor-Stefankowski-da-Silva.pdf"
+                <a x-data
+                   :href="$store.lang.current === 'en' ? '{{ asset('files/Currículo Ygor Stefankowski da Silva - EN.pdf') }}' : '{{ asset('files/Currículo Ygor Stefankowski da Silva.pdf') }}'"
+                   :download="$store.lang.current === 'en' ? 'Curriculo-Ygor-Stefankowski-da-Silva-EN.pdf' : 'Curriculo-Ygor-Stefankowski-da-Silva.pdf'"
                    class="inline-flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                          viewBox="0 0 24 24" stroke="currentColor">

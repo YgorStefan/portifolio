@@ -35,7 +35,7 @@ const translations = {
         pt: 'Sempre estou em busca de novas oportunidades onde possa contribuir com soluções técnicas, sólidas, escaláveis e continuar evoluindo como pessoa e profissional.',
         en: 'I\'m always looking for new opportunities where I can contribute with solid, scalable technical solutions and continue evolving as a person and professional.'
     },
-    'about.cv':        { pt: 'Download CV', en: 'Download CV' },
+    'about.cv':        { pt: 'Baixar Currículo', en: 'Download Resume' },
 
     // ── Skills ──
     'skills.title':    { pt: 'Habilidades', en: 'Skills' },
