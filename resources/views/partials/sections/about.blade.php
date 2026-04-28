@@ -21,7 +21,7 @@
                 <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6" data-i18n="about.p2">
                     Minha trajetória começou pela curiosidade em entender como as coisas funcionam
                     por baixo dos panos, sempre com um perfil autodidata. Hoje trabalho com a stack completa,
-                    do banco de dados (MySQL, PostgreSQL) à interface (HTML, CSS, JavaScript, Vue.js),
+                    do banco de dados (MySQL, PostgreSQL) à interface (HTML, CSS, JavaScript, Tailwind CSS, Vue.js, etc.),
                     sempre prezando pela qualidade do código e experiência do usuário.
                 </p>
                 <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10" data-i18n="about.p3">
