@@ -54,6 +54,7 @@
                     'EduFlow Pro' => 'project.eduflow.desc',
                     'Portfólio' => 'project.portfolio.desc',
                     'Doc Translator' => 'project.cvtranslator.desc',
+                    'Aether' => 'project.aether.desc',
                 ];
             @endphp
 

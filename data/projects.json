@@ -1,5 +1,21 @@
 [
   {
+    "title": "Aether",
+    "description": "Sistema de IA com agentes onde o usuário define um objetivo complexo e o sistema faz o spawn de múltiplos agentes especializados que colaboram entre si.",
+    "image": "aether.jpg",
+    "url": "https://aether.ygorstefan.com/",
+    "repo": "https://github.com/YgorStefan/aether",
+    "tags": [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Google Gemini"
+    ]
+  },
+  {
     "title": "CDP (Catálogo de Produtos)",
     "description": "Aplicação React para gerenciamento de produtos organizados por marcas, com drawer lateral para formulários, cores personalizadas por marca e persistência via localStorage.",
     "image": "cdp.jpg",
@@ -26,6 +42,20 @@
       "Tailwind CSS",
       "JavaScript",
       "Chart.js"
+    ]
+  },
+  {
+    "title": "Doc Translator",
+    "description": "Free tool to translate Word (.docx) documents to English while preserving the original formatting, with PDF export directly from the browser.",
+    "image": "translator.jpg",
+    "url": "/doc-translator",
+    "repo": "https://github.com/YgorStefan/portifolio",
+    "tags": [
+      "JavaScript",
+      "Tailwind CSS",
+      "JSZip",
+      "docx-preview",
+      "Google Translate"
     ]
   },
   {
@@ -70,20 +100,6 @@
       "Tailwind CSS",
       "Alpine.js",
       "JavaScript"
-    ]
-  },
-  {
-    "title": "Doc Translator",
-    "description": "Free tool to translate Word (.docx) documents to English while preserving the original formatting, with PDF export directly from the browser.",
-    "image": "translator.jpg",
-    "url": "/doc-translator",
-    "repo": "https://github.com/YgorStefan/portifolio",
-    "tags": [
-      "JavaScript",
-      "Tailwind CSS",
-      "JSZip",
-      "docx-preview",
-      "Google Translate"
     ]
   }
 ]

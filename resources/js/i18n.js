@@ -86,6 +86,10 @@ const translations = {
         pt: 'Ferramenta gratuita para traduzir documentos Word (.docx) para o inglês preservando a formatação original, com exportação para PDF direto pelo navegador.',
         en: 'Free tool to translate Word (.docx) documents to English while preserving the original formatting, with PDF export directly from the browser.'
     },
+    'project.aether.desc': {
+        pt: 'Sistema de IA com agentes onde o usuário define um objetivo complexo e o sistema faz o spawn de múltiplos agentes especializados que colaboram entre si.',
+        en: 'AI agent system where the user defines a complex goal and the system spawns multiple specialized agents that collaborate with each other.'
+    },
 
     // ── Minijogos ──
     'minigames.title': { pt: 'Minijogos', en: 'Mini Games' },
